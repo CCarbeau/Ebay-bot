@@ -1,0 +1,10 @@
+Features:
+    - Need to filter out lots or adjust pricing for card lots
+    - Need to create automated system that will keep the program running constantly
+    - Create email mechanism
+    - Create list of players/cards to search 
+    - Create price comparing system 
+
+Notes: 
+    - Allowed 5000 calls per day, make 2 calls per cycle, can search/compare 104 items per hour 
+    - If algorithm only runs during waking hours (say 8 am - 1 am) can search/compare 147 items per hour
