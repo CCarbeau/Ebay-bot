@@ -12,6 +12,7 @@ import pandas as pd
 # Email addresses is an array of the recipients of the email
 # Items is a list of identified targets that we are notifying the userbase about
 def email(emailAddresses,targets):
+    # TODO: Make this automate through all users in emailAddresses 
     myEmail ="christiancarbeau@gmail.com"
     password = "ezcx vfwc sbae ohpk"
 
