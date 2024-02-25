@@ -18,7 +18,6 @@ def main():
     
     
     prices = currPrice(token, "2023 topps chrome anthony-volpe psa 10",condition["Graded"])
-
     auctions = currAucPrices(token, "2023 topps chrome anthony-volpe psa 10", "2750", (date+timeRange).isoformat()[:23])
     print(prices)
     print(auctions)
