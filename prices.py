@@ -8,7 +8,7 @@ def currPrice(token, item, condition):
     # How many items to search (200 is max)
     count = 200
 
-    parseddoc = getJSON(token,item,condition)
+    parseddoc = getJSON(token,item,condition, count)
 
     # Create series's for each items' title, price, and link
     prices = pd.Series(index = np.arange(count))

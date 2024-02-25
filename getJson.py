@@ -1,7 +1,7 @@
 import json
 import requests 
 
-def getJSON(token,item,condition, count):
+def getJSON(token, item, condition, count):
 
     # Zip code that the item can ship to
     zipCode = "07960"
