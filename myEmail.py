@@ -13,8 +13,8 @@ import pandas as pd
 
 # Email addresses is an array of the recipients of the email
 # Items is a list of identified targets that we are notifying the userbase about
-def email(emailAddresses,targets):
-    if(targets.size != 0):
+def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
+    if(aucTargDf.size != 0):
         myEmail ="christiancarbeau@gmail.com"
         password = "ezcx vfwc sbae ohpk"
 
@@ -65,10 +65,10 @@ def email(emailAddresses,targets):
     </tr>
 """
         # Add rows dynamically
-        for row, value in targets.iterrows():
-            item = targets.loc[row]["Title"]
-            price = targets.loc[row]["Price"]
-            discount = ("%.2f" % round(targets.loc[row]["Discount"], 2))
+        for row, value in aucTargDf.iterrows():
+            item = aucTargDf.loc[row]["Title"]
+            price = aucTargDf.loc[row]["Price"]
+            discount = ("%.2f" % round(aucTargDf.loc[row]["Discount"], 2))
             discount_cell_class = "green"
             if(float(discount) >= 50):
                 discount_cell_class="discount-cell-green"
@@ -76,7 +76,7 @@ def email(emailAddresses,targets):
                 discount_cell_class="discount-cell-light-green"
             else: 
                 discount_cell_class="discount-cell-yellow"
-            link = targets.loc[row]["Link"]
+            link = aucTargDf.loc[row]["Link"]
             html_content += f"""
             <tr>
               <td>{item}</td>
