@@ -34,6 +34,7 @@ def main():
                 "2023 bowman 1st max-clark",
                 "2023 bowman 1st wyatt-langford",
                 "2022 bowman 1st jackson-chourio"]
+    
     emailAddresses = ["cikoticz24@gmail.com", "dominicpiz2@gmail.com","abby.samson@richmond.edu"]
 
     for item in searches:
