@@ -22,7 +22,7 @@ def main():
     prices = currPrice(token, item, condition["Graded"])
     auctions = currAucPrices(token, item, condition["Graded"], (date+timeRange).isoformat()[:23])
     targets = aucTargets(prices,auctions)
-    email(["cikoticz24@gmail.com","christian.carbeau@duke.edu"],targets)
+    email(["dominicpiz2@gmail.com","cikoticz24@gmail.com"],targets)
 
 if __name__ == "__main__":
     main()
