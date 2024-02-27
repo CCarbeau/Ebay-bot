@@ -15,7 +15,7 @@ import pandas as pd
 
 def main():
     # Permission code from eBay 
-    token = "v^1.1#i^1#r^0#f^0#I^3#p^1#t^H4sIAAAAAAAAAOVYa2wUVRTuttsahEqkjSJisgwQkLqzM7M7uztjd+t2W6AI7dLdFi0RuDNztx26O7Ode7ePILEpBlQ08AdNQEg1vmIiJSEiwaSCRghqlUciBAxgogRB/iii+IjemS5lWwmvbmIT989mzj333O/77jn33Bmmu2jcnLXz1/5abLsrv7eb6c632djxzLiiwrJ7CvKnFOYxWQ623u4Z3faegnPlCCQTKbEeopSuIejoTCY0JFrGAJU2NFEHSEWiBpIQiVgWo6FFC0WOZsSUoWNd1hOUo6YqQHndfgUIPsknQZlx8xKxaldjxvQABQSPLPglSfGTQYHnyDhCaVijIQw0HKA4hvM4Gc7JeWOsIHK8yDO0l2GaKEcjNJCqa8SFZqigBVe05hpZWG8MFSAEDUyCUMGa0NxoXaimqro2Vu7KihXM6BDFAKfR8KewrkBHI0ik4Y2XQZa3GE3LMkSIcgUHVxgeVAxdBXMH8C2p/TLwQQZICif5JbfkzYmUc3UjCfCNcZgWVXHGLVcRaljFXTdTlKghrYQyzjzVkhA1VQ7zb3EaJNS4Co0AVV0ZejIUiVDBcIuhIqwCJ4LAkFuckfoqpwQg4HmO5Z28x8t5JNadWWYwVkbkEeuEdU1RTcmQo1bHlZBghiOVYbOUIU51Wp0RimMTT5Yfx2YU5AW2ydzSwT1M4xbN3FWYJDI4rMeb6z80G2NDldIYDkUYOWAJRIomlVIVauSglYmZ5OlEAaoF45TocnV0dNAdblo3ml0cw7CuJxYtjMotMAkoy9esddNfvfkEp2pRkSGZiVQRd6UIlk6SqQSA1kwFPX5BEJiM7sNhBUda/2XI4uwaXg+5qg9Binu9DB/3yYrH7+PZXNRHMJOiLhMHlECXMwmMVohTCSBDp0zyLJ2EhqqIbj7Ouf1x6FS8QtzpEeJxp8QrXicbh5CBUJLIKfj/KZNbTfQolA2Ic5TpOcpyoa29M8TiuFHpizf6Y6SXNZXpUf/KcFt9/YLKOugygKdW5rklbc2BW62F65IPJ1SiTIysnysBzFrPjQjzdYShMip6UVlPwYieUOWusbXBbkOJAAN3RWEiQQyjIhlKpWpydVLniN5tHRJ3xjqX/ek/6U3XZYXMhB1brMz5iAQAKZU2uw8t60mXDsi1w2XWOjEvt1CPirdK7qxjijUhOchWVQYvm7RFmUbtMm1ApKcNcs+m68zbV0xvhRrpZtjQEwloNLKjruZkMo2BlIBjraxzkOAqGGOtlvUxfsHH8/zoeMlWI10+1o6k3B3E9orbvFC7hr/cB/OsH9tj+5jpsfXn22xMOTOTnc5MKyposBdMmIJUDGkVxGmkNmvkndWAdCvsSgHVyC/J++n1TfPDU6rrXp6zKtZ1aMuBvAlZ3xZ6n2ImD31dGFfAjs/61MBMvTZSyE68v5jzMBznZQWO7HgTM/3aqJ29z17aR897+/GSR55ZumZa1cm+zqWbjz4tM8VDTjZbYZ69x5Y3fUHk7trLZQevrP9E27VwU+zwO/QeR9+HZ9Il5y4sO5MY2PNj0+GKF17zfNk0M7Cd3T1p50tb062XH1vRGOsrFTZuP3Bg/eZlz71bElFmF8/bf6g8/OcbNe3r/t525CFqybbVK37rz69Luv/Y9/veM8A+0HBl3StHAhdXvvfwpH3u1Q9s7J/wHX+wd/WOR0+cTRd6F9uWzmp4c+eiGZ6ZC9jTA5Vb3EfVvQcvPN92ZNax86fZUEXep8d/2cBE9nMdP/QfU+4Ne0+9P9D62ayKFx9sm33p4prmHaXPTj757ap9Z0vb/pr7+VcXdr36TUvD9/l7w1PLJhahr0+dP2Fv+ugLz9b2DzZc+nlz5Dhcs5t/a3Av/wFd5gvu9REAAA=="
+    token = "v^1.1#i^1#r^0#p^1#f^0#I^3#t^H4sIAAAAAAAAAOVYa2wUVRTe3T4ogYKiFmx8bAfUBJjZO7OvmUl3y/aVrkBbumvRGoU7M3faobsz27l3aRsiqdWgRqkGadXwkECCkRCFpFEbBbWYqCQE1EBAg0ElSMIPI38MSqKz01K2lfDqJjZx/2zm3HPP/b7vnnPPnQE9hdMXbqjb8Eexc5prRw/ocTmd7AwwvbBg0aw8V2mBA2Q5OHf0LOjJ7807X45hMpESmxBOGTpG7q5kQseibQxRaVMXDYg1LOowibBIZDEWWb5M5BggpkyDGLKRoNzR6hClcgFeEbzWHwK+AICWVb8SM25Y45DjIfAFWRYIqiJYwxinUVTHBOokRHGA89GAo7lgnA2IwC9yPOMVuBbK3YxMrBm65cIAKmyjFe25ZhbU6yOFGCOTWEGocDRSG2uIRKtr6uPlnqxY4VEZYgSSNB7/VGUoyN0ME2l0/WWw7S3G0rKMMKY84ZEVxgcVI1fA3AZ8W2lJCgYlgfPziAeqLfTklaw1zCQk14eRsWgKrdquItKJRrpvJKglhrQGyWT0qd4KEa12Z/5WpGFCUzVkhqiaysgTkcZGKlzVZmqYaJDGCJpyG93YVE1LEEG/n2P9tN8X4HwS6x1dZiTWqMYT1qkydEXLKIbd9QapRBZmNF4Zv+jPUsZyatAbzIhKMniy/fgrCvJ8S2ZHR7YwTdr0zKaipCWD2368sf5jswkxNSlN0FiEiQO2QCEKplKaQk0ctBNxNHe6cIhqIyQlejydnZ1Mp5cxzFYPBwDreXz5spjchpJWfoz4Zmq9C2s3nkBrNhUZWTOxJpLulIWly0pUC4DeSoV9vCAIYFT38bDCE63/MmRx9owvh1yVhwBVRVagZJWHz8/BYC7qIzyaop4MDiTBbjoJzXZEUgkoI1q28iydRKamiF6/ynl5FdFKQFBpn6CqtORXAjSrIgQQkiRZ4P8/ZXKziR5DsolIzjI9J1kudKztirBENSuDajMftzpZyyIjxq+p6mhqerSyAXlM6KuX/dzKjtbQzdbCNclXJTRLmbi1fu4EyNR6LkSoMzBByqToxWQjhRqNhCZ3T60N9ppKIzRJdwwlEpZhUiQjqVQ0dyd1Tujd0iFxe6xz25/+g950TVY4k7BTi1VmPrYCwJTGZLoPIxtJjwGta4dlytS6tspGPSnemnVlnVKsLZIjbDVl5LLJ2JQZvFZmTISNtGlds5mGzO0rbrQj3epmxDQSCWQ2s5Ou5mQyTaCUQFOtrHOQ4BqcYq2WDQIB+ASB4yfFS7Yb6aqpdiTl8iDOD93Shdoz/tU+7LB/bK9zGPQ6D7qcTlAOHmLng7LCvMfy82aWYo0gRoMqg7VW3XplNRHTjrpTUDNddzku7uyvqyqtaRhYuC7efWzLl46ZWV8WdjwF5o19W5iex87I+tAA7rs6UsDOnlvM+QDHBdkA8HN8C5h/dTSfLcm/G+0+47y8Wdr882Dl9q61Q7tKNt3jAsVjTk5ngSO/1+ko+bP4w8XU9g+2tA+VSccHy/rWx5sfeO6H1aDoc0Eb2s9ViAdW7JtdcX/43MDTH20S/q6rGfrrwpH9Jza+fPz9j6XfAm/vXf3tXtcefQH9e9FnXnHAsfToG96DR7dq0fZfn/365I/nei4OvrAouO7UyjWVy9550vVMXsmR5DTYd2ifd8+uOf0Vi1PbIuvvPfl9Udcrh90nFCcc2PaL98DuSy99EV9yuPzdQ7WvV9y5M/natLcKH/l02EHnec8fO3LmUg0MLsmPXph1dt2D1Z7msq39e8uYeTvVuacvd8z/pu+nOc9vLH0zUst+lz57dngpWc83vvrJVyuLBstf3O/rL7lj64zj+unhh0+9d54SRvbyH3fFyzbzEQAA"
     
     # Condition legend
     condition = {"Graded":"2750", "Ungraded":"4000"}
@@ -27,13 +27,45 @@ def main():
     buyTargDf = pd.DataFrame(columns = ["Title", "Price", "Discount", "Link"])
     offerTargDf = pd.DataFrame(columns = ["Title", "Price", "Discount", "Link"])
     
-    searches = ["2023 anthony-volpe psa 10",
-                "2023 adley-rutschman psa 10",
-                "2022 julio-rodriguez psa 10",
-                "2022 bobby-witt-jr psa 10",
-                "2023 bowman 1st max-clark",
-                "2023 bowman 1st wyatt-langford",
-                "2022 bowman 1st jackson-chourio"]
+    searches = ["2023 Topps Chrome Anthony-Volpe PSA 10",
+                "2023 Topps Chrome Anthony-Volpe auto",
+                "2020 Bowman Chrome Anthony-Volpe 1st auto",
+                "2023 Topps Chrome Adley-Rutschman PSA 10",
+                "2023 Topps Chrome Adley-Rutschman auto",
+                "2019 Bowman Chrome Adley-Rutschman 1st auto",
+                "2022 Topps Chrome Update Julio-Rodriguez PSA 10",
+                "2022 Topps Chrome Update Julio-Rodriguez auto",
+                "2022 Topps Chrome Update Bobby-Witt-Jr PSA 10",
+                "2022 Topps Chrome Update Bobby-Witt-Jr auto",
+                "2023 Bowman Draft Max-Clark 1st auto",
+                "2023 Bowman Draft Max-Clark 1st",
+                "2020 Bowman Chrome 1st Luisangel-Acuna auto",
+                "2022 Bowman Draft Chase-DeLauter 1st auto",
+                "2022 Bowman Chrome Jackson-Merrill 1st auto",
+                "2021 Bowman Chrome Adael-Amador 1st auto",
+                "2021 Bowman Draft Carson-Williams 1st auto",
+                "2023 Bowman Draft Colt-Emerson 1st auto",
+                "2022 Bowman Chrome Colson-Montgomery 1st auto",
+                "2022 Bowman Chrome Curtis-Mead 1st auto",
+                "2022 Bowman Draft Jett-Williams 1st auto",
+                "2021 Bowman Draft Jordan-Lawlar 1st auto",
+                "2022 Bowman Chrome James-Wood 1st auto",
+                "2020 Bowman Chrome Jasson-Dominguez 1st auto",
+                "2023 Bowman Draft Matt-Shaw 1st auto",
+                "2023 Bowman Chrome Romsn-Anthony 1st auto",
+                "2021 Bowman Chrome Anthony-Mayo 1st auto",
+                "2020 Bowman Draft Colt-Keith 1st auto",
+                "2019 Bowman Chrome Noelvi-Marte 1st auto",
+                "2020 Bowman Draft Pete-Crow-Armstrong 1st auto", 
+                "2023 Bowman Chrome Samuel-Basallo 1st auto",
+                "2020 Bowman Draft Evan-Carter 1st auto",
+                "2023 Bowman Chrome Ethan-Salas 1st auto",
+                "2023 Bowman Chrome Junior-Caminero 1st auto",
+                "2023 Bowman Draft Wyatt-Langford 1st auto",
+                "2023 Bowman Draft Wyatt-Langford 1st",
+                "2022 Bowman Chrome Jackson-Chourio 1st auto",
+                "2022 Bowman Chrome Jackson-Chourio 1st",
+                "2022 Bowman Draft Jackson-Holiday 1st auto"]
     
     emailAddresses = ["cikoticz24@gmail.com", "dominicpiz2@gmail.com","abby.samson@richmond.edu"]
 
@@ -41,18 +73,24 @@ def main():
         prices = currPrice(token, item, condition["Graded"])
         auctions = currAucPrices(token, item, condition["Graded"], (date+timeRange).isoformat()[:23])
         bestOffer = bestOffPrices(token, item, condition["Graded"])
+        
+        print(prices)
+        print(auctions)
 
         # Auction Targets 
-        aucTargDf = pd.concat([aucTargDf,aucTargets(prices,auctions),])
-        aucTargDf = aucTargDf.reset_index(drop=True)
+        if(len(aucTargets(prices,auctions))!=0):
+            aucTargDf = pd.concat([aucTargDf,aucTargets(prices,auctions)])
+            aucTargDf = aucTargDf.reset_index(drop=True)
 
         # Buy Now Targets:
-        buyTargDf = pd.concat(buyTargDf,buyNowTargets(prices))
-        buyTargDf = buyTargDf.reset_index(drop=True)
+        if(len(buyNowTargets(prices))!=0):
+            buyTargDf = pd.concat([buyTargDf,buyNowTargets(prices)])
+            buyTargDf = buyTargDf.reset_index(drop=True)
 
         # Best Offer Targets;
-        offerTargDf = pd.concat(offerTargDf,offerTargets(prices,bestOffer))
-        offerTargDf = offerTargDf.reset_index(drop = True)
+        if (len(offerTargets(prices,bestOffer))!=0):
+            offerTargDf = pd.concat([offerTargDf,offerTargets(prices,bestOffer)])
+            offerTargDf = offerTargDf.reset_index(drop = True)
 
     aucTargDf = aucTargDf.sort_values(by="Discount", ascending=False)
     email(emailAddresses,aucTargDf, buyTargDf, offerTargDf)

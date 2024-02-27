@@ -7,48 +7,53 @@ from getJson import getJSON
 def bestOffPrices(token, item, condition):
     count = 200; 
     
-    parsseddoc = getJSON(token,item,condition, count)
+    parseddoc = getJSON(token,item,condition, count)
 
     # Create series's for each items' title, price, and link
     prices = pd.Series()
     ids = []
     links = []
+    try: 
+        parseddoc["itemSummaries"]
+    except:
+        print("No best offers found for: "+item)
+        bestOffers = pd.DataFrame(columns = ["Title", "Price", "Link"])
+    else: 
+        i = 0
+        for item in parseddoc["itemSummaries"]:
+            if "BEST_OFFER" in item["buyingOptions"]:
+                try: 
+                    ids.append(item["title"])
+                except: 
+                    ids.append("None")
 
-    i = 0
-    for item in parsseddoc["itemSummaries"]:
-        if "BEST_OFFER" in item["buyingOptions"]:
-            try: 
-                ids.append(item["title"])
-            except: 
-                ids.append("None")
+                try:
+                    links.append(item["itemWebUrl"])
+                except:
+                    links.append("None")
 
-            try:
-                links.append(item["itemWebUrl"])
-            except:
-                links.append("None")
+                try:
+                    price = float(item["price"]["value"])
+                except:
+                    price = 100000
 
-            try:
-                price = float(item["price"]["value"])
-            except:
-                price = 100000
+                try:
+                    price = price + float(item["shippingOptions"][0]["shippingCost"]["value"])
+                except:
+                    # Add an arbitrary 5 dollars if shipping price isn't specified 
+                    price = price + 5
 
-            try:
-                price = price + float(item["shippingOptions"][0]["shippingCost"]["value"])
-            except:
-                # Add an arbitrary 5 dollars if shipping price isn't specified 
-                price = price + 5
+                prices[i] = float(price)
+                i = i + 1
 
-            prices[i] = float(price)
-            i = i + 1
+        # Create dataFrame with the series created in the loop above
+        bestOffers = pd.DataFrame(columns=["Title", "Price", "Link"])
+        bestOffers["Title"]=ids
+        bestOffers["Price"]=prices
+        bestOffers["Link"]=links
 
-    # Create dataFrame with the series created in the loop above
-    bestOffers = pd.DataFrame(columns=["Title", "Price", "Link"])
-    bestOffers["Title"]=ids
-    bestOffers["Price"]=prices
-    bestOffers["Link"]=links
-
-    # Sort dataFrame by price from least to greatest
-    bestOffers = bestOffers.sort_values(by="Price")
+        # Sort dataFrame by price from least to greatest
+        bestOffers = bestOffers.sort_values(by="Price")
 
     return bestOffers
 

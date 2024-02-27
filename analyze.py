@@ -9,7 +9,9 @@ def aucTargets(marketPrices, auctionPrice):
 
     # Calculate the market price of a card (model is subject to change)
     value = 0
-    if(len(marketPrices)<5):
+    if(len(marketPrices)==0):
+        return deals
+    elif(len(marketPrices)<5):
         for i in range(len(marketPrices)):
             value = value + marketPrices.iloc[i]["Price"]
         value = value/len(marketPrices)
@@ -68,7 +70,9 @@ def offerTargets(marketPrices, offerPrices):
 
     # Calculate the market price of a card (model is subject to change)
     value = 0
-    if(len(marketPrices)<5):
+    if(len(marketPrices)==0):
+        return deals
+    elif(len(marketPrices)<5):
         for i in range(len(marketPrices)):
             value = value + marketPrices.iloc[i]["Price"]
         value = value/len(marketPrices)
