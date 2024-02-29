@@ -12,5 +12,4 @@ Notes:
 TODO: 
     - Add best offer and buy now targets to the email 
     - Add all and better search terms 
-    - Treat case when there are no available auctions 
     - Fix condition search (i.e. when i put graded as the condition non graded cards pop up)
