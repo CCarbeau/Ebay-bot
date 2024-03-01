@@ -208,7 +208,6 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
     </tr>
 """
         # Add rows dynamically
-        print(offerTargDf)
         for row, value in offerTargDf.iterrows():
             item = offerTargDf.loc[row]["Title"]
             price = offerTargDf.loc[row]["Price"]

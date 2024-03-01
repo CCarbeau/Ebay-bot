@@ -70,9 +70,9 @@ def main():
     emailAddresses = ["cikoticz24@gmail.com"]
 
     for item in searches:
-        prices = currPrice(token, item, condition["Graded"])
-        auctions = currAucPrices(token, item, condition["Graded"], (date+timeRange).isoformat()[:23])
-        bestOffer = bestOffPrices(token, item, condition["Graded"])
+        prices = currPrice(token, item, condition["Ungraded"])
+        auctions = currAucPrices(token, item, condition["Ungraded"], (date+timeRange).isoformat()[:23])
+        bestOffer = bestOffPrices(token, item, condition["Ungraded"])
         
         # print(prices)
         # print(auctions)
