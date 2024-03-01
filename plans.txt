@@ -10,6 +10,6 @@ Notes:
     - If algorithm only runs during waking hours (say 8 am - 1 am) can search/compare 147 items per hour
 
 TODO: 
-    - Add best offer and buy now targets to the email 
     - Add all and better search terms 
     - Fix condition search (i.e. when i put graded as the condition non graded cards pop up)
+    - Make filter to get rid of pick your players items 

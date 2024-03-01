@@ -67,7 +67,7 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
     </tr>
 """
         # Add rows dynamically
-        for row, value in aucTargDf.iterrows():
+        for row,value in aucTargDf.iterrows():
             item = aucTargDf.loc[row]["Title"]
             price = aucTargDf.loc[row]["Price"]
             discount = ("%.2f" % round(aucTargDf.loc[row]["Discount"], 2))
@@ -78,7 +78,10 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
                 discount_cell_class="discount-cell-light-green"
             else: 
                 discount_cell_class="discount-cell-yellow"
-            link = aucTargDf.loc[row]["Link"]
+            try: 
+              link = aucTargDf.loc[row]["Link"]
+            except:
+              link = "None"
             html_content += f"""
             <tr>
               <td>{item}</td>
@@ -147,7 +150,7 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
                 discount_cell_class="discount-cell-light-green"
             else: 
                 discount_cell_class="discount-cell-yellow"
-            link = aucTargDf.loc[row]["Link"]
+            link = buyTargDf.loc[row]["Link"]
             html_content += f"""
             <tr>
               <td>{item}</td>
@@ -205,6 +208,7 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
     </tr>
 """
         # Add rows dynamically
+        print(offerTargDf)
         for row, value in offerTargDf.iterrows():
             item = offerTargDf.loc[row]["Title"]
             price = offerTargDf.loc[row]["Price"]
