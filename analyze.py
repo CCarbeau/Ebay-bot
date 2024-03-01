@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import math
+from model import buyNowModel
 
 # Takes in a dataframe of the market prices returned by prices
 # Takes in a dataframe of the current auctions prices from auctionSearch
@@ -27,10 +29,12 @@ def aucTargets(marketPrices, auctionPrice):
     # Identify underpriced cards
     for i in range(len(auctionPrice)):
         if(auctionPrice.iloc[i]["Price"]<=0.75*value):
-            ids.append(auctionPrice.iloc[i]["Title"])
-            price[i] = auctionPrice.iloc[i]["Price"]
-            discount[i] = ((value - auctionPrice.iloc[i]["Price"])/value)*100
-            links.append(auctionPrice.iloc[i]["Link"])
+            parse = auctionPrice.iloc[i]["Title"].split(" ")
+            if "Non" not in parse and "non" not in parse and "Signed" not in parse and "signed" not in parse and "SIGNED" not in parse:
+                ids.append(auctionPrice.iloc[i]["Title"])
+                price[i] = auctionPrice.iloc[i]["Price"]
+                discount[i] = ((value - auctionPrice.iloc[i]["Price"])/value)*100
+                links.append(auctionPrice.iloc[i]["Link"])
 
     deals["Title"] = ids
     deals["Price"] = price
@@ -50,11 +54,13 @@ def buyNowTargets(marketPrices):
     discount = pd.Series()
     links = []
     if(len(marketPrices)>=2):
-        if(marketPrices.iloc[0]["Price"]<=0.75*marketPrices.iloc[1]["Price"]):
-            ids.append(marketPrices.iloc[0]["Title"])
-            price[0] = marketPrices.iloc[0]["Price"]
-            discount[0] = ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
-            links.append(marketPrices.iloc[0]["Link"])
+        if(marketPrices.iloc[0]["Price"]<=buyNowModel(marketPrices.iloc[0]["Price"])*marketPrices.iloc[1]["Price"] and marketPrices.iloc[0]["Price"]<=.93*marketPrices.iloc[1]["Price"] ):
+            parse = marketPrices.iloc[0]["Title"].split(" ")
+            if "Non" not in parse and "non" not in parse and "Signed" not in parse and "signed" not in parse and "SIGNED" not in parse:
+                ids.append(marketPrices.iloc[0]["Title"])
+                price[0] = marketPrices.iloc[0]["Price"]
+                discount[0] = ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
+                links.append(marketPrices.iloc[0]["Link"])
     deals["Title"] = ids
     deals["Price"] = price
     deals["Discount"] = discount
@@ -74,12 +80,10 @@ def offerTargets(marketPrices, offerPrices):
         return deals
     elif(len(marketPrices)<5):
         for i in range(len(marketPrices)):
-            value = value + marketPrices.iloc[i]["Price"]
-        value = value/len(marketPrices)
+            value = value + ((len(marketPrices)-i)/((1+len(marketPrices))*.5*len(marketPrices)))*marketPrices.iloc[i]["Price"]
     else:
         for i in range(5):
-            value = value + marketPrices.iloc[i]["Price"]
-        value = value/5
+            value = value + ((len(marketPrices)-i)/((1+len(marketPrices))*.5*len(marketPrices)))*marketPrices.iloc[i]["Price"]
     
     ids = []
     price = pd.Series()
@@ -88,10 +92,12 @@ def offerTargets(marketPrices, offerPrices):
     # Identify underpriced cards
     for i in range(len(offerPrices)):
         if(offerPrices.iloc[i]["Price"]<=0.9*value):
-            ids.append(offerPrices.iloc[i]["Title"])
-            price[i] = offerPrices.iloc[i]["Price"]
-            discount[i] = ((value - offerPrices.iloc[i]["Price"])/value)*100
-            links.append(offerPrices.iloc[i]["Link"])
+            parse = offerPrices.iloc[i]["Title"].split(" ")
+            if "Non" not in parse and "non" not in parse and "Signed" not in parse and "signed" not in parse and "SIGNED" not in parse:
+                ids.append(offerPrices.iloc[i]["Title"])
+                price[i] = offerPrices.iloc[i]["Price"]
+                discount[i] = ((value - offerPrices.iloc[i]["Price"])/value)*100
+                links.append(offerPrices.iloc[i]["Link"])
 
     deals["Title"] = ids
     deals["Price"] = price
