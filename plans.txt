@@ -11,5 +11,6 @@ Notes:
 
 TODO: 
     - Add all and better search terms 
-    - Fix condition search (i.e. when i put graded as the condition non graded cards pop up)
+    - Adjust pricing for card lots
     - Make filter to get rid of pick your players items 
+    - Find a way to filter out "non auto" titles
