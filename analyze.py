@@ -38,9 +38,9 @@ def aucTargets(marketPrices, auctionPrice):
                 discount[i] = ((value - auctionPrice.iloc[i]["Price"])/value)*100
                 links.append(auctionPrice.iloc[i]["Link"])
 
-    deals["Title"] = ids
     deals["Price"] = price
     deals["Discount"] = discount
+    deals["Title"] = ids
     deals["Link"] = links 
     deals = deals.sort_values(by="Discount", ascending=False)
     
@@ -63,9 +63,10 @@ def buyNowTargets(marketPrices):
                 price[0] = marketPrices.iloc[0]["Price"]
                 discount[0] = ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
                 links.append(marketPrices.iloc[0]["Link"])
-    deals["Title"] = ids
+    
     deals["Price"] = price
     deals["Discount"] = discount
+    deals["Title"] = ids
     deals["Link"] = links
     return deals
 
@@ -100,9 +101,9 @@ def offerTargets(marketPrices, offerPrices):
                 discount[i] = ((value - offerPrices.iloc[i]["Price"])/value)*100
                 links.append(offerPrices.iloc[i]["Link"])
 
-    deals["Title"] = ids
     deals["Price"] = price
     deals["Discount"] = discount
+    deals["Title"] = ids
     deals["Link"] = links 
     deals = deals.sort_values(by="Discount", ascending=False)
     
