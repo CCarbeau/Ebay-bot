@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from getJson import getJSON
 
-bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP","you", "Your","You", "YOUR", "YOU"]
+bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP","you", "Your","You", "YOUR", "YOU", "⚾(pick)", "pick)"]
 bannedBaseWords = ["you", "You", "Your", "YOUR", "YOU"]
 
 # Method that returns the lowest buy now prices for an "item" in a dataFrame that includes the items title, price, and eBay link
