@@ -3,6 +3,8 @@ import numpy as np
 import math
 from model import buyNowModel
 
+bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP"]
+
 # Takes in a dataframe of the market prices returned by prices
 # Takes in a dataframe of the current auctions prices from auctionSearch
 # Returns cards on auction that are underpriced
@@ -30,7 +32,7 @@ def aucTargets(marketPrices, auctionPrice):
     for i in range(len(auctionPrice)):
         if(auctionPrice.iloc[i]["Price"]<=0.75*value):
             parse = auctionPrice.iloc[i]["Title"].split(" ")
-            if "Non" not in parse and "non" not in parse and "Signed" not in parse and "signed" not in parse and "SIGNED" not in parse:
+            if not any(x in parse for x in bannedAutoWords):
                 ids.append(auctionPrice.iloc[i]["Title"])
                 price[i] = auctionPrice.iloc[i]["Price"]
                 discount[i] = ((value - auctionPrice.iloc[i]["Price"])/value)*100
@@ -56,7 +58,7 @@ def buyNowTargets(marketPrices):
     if(len(marketPrices)>=2):
         if(marketPrices.iloc[0]["Price"]<=buyNowModel(marketPrices.iloc[0]["Price"])*marketPrices.iloc[1]["Price"] and marketPrices.iloc[0]["Price"]<=.93*marketPrices.iloc[1]["Price"] ):
             parse = marketPrices.iloc[0]["Title"].split(" ")
-            if "Non" not in parse and "non" not in parse and "Signed" not in parse and "signed" not in parse and "SIGNED" not in parse:
+            if not any(x in parse for x in bannedAutoWords):
                 ids.append(marketPrices.iloc[0]["Title"])
                 price[0] = marketPrices.iloc[0]["Price"]
                 discount[0] = ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
@@ -65,7 +67,6 @@ def buyNowTargets(marketPrices):
     deals["Price"] = price
     deals["Discount"] = discount
     deals["Link"] = links
-
     return deals
 
 # Takes in a dataframe of the market prices returned by prices
@@ -93,7 +94,7 @@ def offerTargets(marketPrices, offerPrices):
     for i in range(len(offerPrices)):
         if(offerPrices.iloc[i]["Price"]<=0.9*value):
             parse = offerPrices.iloc[i]["Title"].split(" ")
-            if "Non" not in parse and "non" not in parse and "Signed" not in parse and "signed" not in parse and "SIGNED" not in parse:
+            if not any(x in parse for x in bannedAutoWords):
                 ids.append(offerPrices.iloc[i]["Title"])
                 price[i] = offerPrices.iloc[i]["Price"]
                 discount[i] = ((value - offerPrices.iloc[i]["Price"])/value)*100

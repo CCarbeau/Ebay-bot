@@ -17,3 +17,4 @@ TODO:
     - Figure out how to handle outlier prices (weighted average method isn't really working)
         - Idea for above: Add a boolean value to the card class that represents if the search is an auto or not 
         and then can filter by that in the price algorithm 
+    - Figure out cause of NAN best offer values 
