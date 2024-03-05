@@ -56,13 +56,15 @@ def buyNowTargets(marketPrices):
     discount = pd.Series()
     links = []
     if(len(marketPrices)>=2):
-        if(marketPrices.iloc[0]["Price"]<=buyNowModel(marketPrices.iloc[0]["Price"])*marketPrices.iloc[1]["Price"] and marketPrices.iloc[0]["Price"]<=.93*marketPrices.iloc[1]["Price"] ):
+        if(marketPrices.iloc[0]["Price"]<=buyNowModel(marketPrices.iloc[0]["Price"])*marketPrices.iloc[1]["Price"] and marketPrices.iloc[0]["Price"]<=.93*marketPrices.iloc[1]["Price"]):
             parse = marketPrices.iloc[0]["Title"].split(" ")
             if not any(x in parse for x in bannedAutoWords):
-                ids.append(marketPrices.iloc[0]["Title"])
-                price[0] = marketPrices.iloc[0]["Price"]
-                discount[0] = ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
-                links.append(marketPrices.iloc[0]["Link"])
+                disc =  ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
+                if(disc<=30):
+                    ids.append(marketPrices.iloc[0]["Title"])
+                    price[0] = marketPrices.iloc[0]["Price"]
+                    discount[0] = ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
+                    links.append(marketPrices.iloc[0]["Link"])
     
     deals["Price"] = price
     deals["Discount"] = discount

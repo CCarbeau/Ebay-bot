@@ -34,52 +34,60 @@ def currPrice(token, item, condition, auto):
                 
                 if(auto):
                     if not any(x in parse for x in bannedAutoWords):
-                        try: 
-                            ids.append(item["title"])
-                        except: 
-                            ids.append("None")
-
-                        try:
-                            links.append(item["itemWebUrl"])
-                        except:
-                            links.append("None")
-                        
+                        firstPrice = 10000
+                        if(i!=0):
+                            firstPrice = prices[0]
                         try:
                             price = float(item["price"]["value"])
                         except:
                             price = 100000
-                        try:
-                            price = price + float(item["shippingOptions"][0]["shippingCost"]["value"])
-                        except:
-                            # Add an arbitrary 5 dollars if shipping price isn't specified 
-                            price = price + 5
+                        if(price <= 2*firstPrice):
+                            try: 
+                                ids.append(item["title"])
+                            except: 
+                                ids.append("None")
 
-                        prices[i] = float(price)
-                        i = i + 1
+                            try:
+                                links.append(item["itemWebUrl"])
+                            except:
+                                links.append("None")
+                            
+                            try:
+                                price = price + float(item["shippingOptions"][0]["shippingCost"]["value"])
+                            except:
+                                # Add an arbitrary 5 dollars if shipping price isn't specified 
+                                price = price + 5
+
+                            prices[i] = float(price)
+                            i = i + 1
                 else: 
                     if not any(x in parse for x in bannedBaseWords):
-                        try: 
-                            ids.append(item["title"])
-                        except: 
-                            ids.append("None")
-
-                        try:
-                            links.append(item["itemWebUrl"])
-                        except:
-                            links.append("None")
-                        
+                        firstPrice = 10000
+                        if(i!=0):
+                            firstPrice = prices[0]
                         try:
                             price = float(item["price"]["value"])
                         except:
                             price = 100000
-                        try:
-                            price = price + float(item["shippingOptions"][0]["shippingCost"]["value"])
-                        except:
-                            # Add an arbitrary 5 dollars if shipping price isn't specified 
-                            price = price + 5
+                        if(price <= 2*firstPrice):
+                            try: 
+                                ids.append(item["title"])
+                            except: 
+                                ids.append("None")
 
-                        prices[i] = float(price)
-                        i = i + 1
+                            try:
+                                links.append(item["itemWebUrl"])
+                            except:
+                                links.append("None")
+                            
+                            try:
+                                price = price + float(item["shippingOptions"][0]["shippingCost"]["value"])
+                            except:
+                                # Add an arbitrary 5 dollars if shipping price isn't specified 
+                                price = price + 5
+
+                            prices[i] = float(price)
+                            i = i + 1
 
         # Create dataFrame with the series created in the loop above
         data = pd.DataFrame(columns = ["Title", "Price", "Link"])
@@ -90,4 +98,4 @@ def currPrice(token, item, condition, auto):
         # Sort dataFrame by price from least to greatest
         data = data.sort_values(by="Price")
 
-    return data
+    return data.loc[(data["Price"]<=2*data.iloc[0]["Price"])]
