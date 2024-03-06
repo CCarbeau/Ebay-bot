@@ -6,7 +6,7 @@ import numpy as np
 # Function finds the lowest auction prices of "item" within a certain end data 
 def currAucPrices(token,item,condition,date):
      # How many items to search (200 is max)
-    count = 200
+    count = 100
 
     # Zip code that the item can ship to
     zipCode = "07960"

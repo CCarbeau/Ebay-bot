@@ -5,7 +5,7 @@ from getJson import getJSON
 # Function will get the json file from the getJSON library and return a dataframe of best offer cards 
 # sorted from lowest to highest price
 def bestOffPrices(token, item, condition):
-    count = 200; 
+    count = 5; 
     
     parseddoc = getJSON(token,item,condition, count)
 

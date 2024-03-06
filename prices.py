@@ -9,7 +9,7 @@ bannedBaseWords = ["you", "You", "Your", "YOUR", "YOU"]
 def currPrice(token, item, condition, auto):
 
     # How many items to search (200 is max)
-    count = 200
+    count = 5
 
     parseddoc = getJSON(token,item,condition, count)
 
@@ -97,5 +97,7 @@ def currPrice(token, item, condition, auto):
 
         # Sort dataFrame by price from least to greatest
         data = data.sort_values(by="Price")
-
-    return data.loc[(data["Price"]<=2*data.iloc[0]["Price"])]
+    try:
+        return data.loc[(data["Price"]<=2*data.iloc[0]["Price"])]
+    except:
+        return data
