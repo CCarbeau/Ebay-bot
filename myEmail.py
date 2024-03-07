@@ -69,8 +69,8 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
         # Add rows dynamically
         for row,value in aucTargDf.iterrows():
             item = aucTargDf.loc[row]["Title"]
-            price = aucTargDf.loc[row]["Price"]
-            discount = ("%.2f" % round(aucTargDf.loc[row]["Discount"], 2))
+            price = "{:0.2f}".format(aucTargDf.loc[row]["Price"])
+            discount = ("{:0.2f}".format(aucTargDf.loc[row]["Discount"]))
             discount_cell_class = "green"
             if(float(discount) >= 50):
                 discount_cell_class="discount-cell-green"
@@ -141,7 +141,7 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
         # Add rows dynamically
         for row, value in buyTargDf.iterrows():
             item = buyTargDf.loc[row]["Title"]
-            price = buyTargDf.loc[row]["Price"]
+            price = "{:0.2f}".format(buyTargDf.loc[row]["Price"])
             discount = ("%.2f" % round(buyTargDf.loc[row]["Discount"], 2))
             discount_cell_class = "green"
             if(float(discount) >= 50):
@@ -210,7 +210,7 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
         # Add rows dynamically
         for row, value in offerTargDf.iterrows():
             item = offerTargDf.loc[row]["Title"]
-            price = offerTargDf.loc[row]["Price"]
+            price = "{:0.2f}".format(offerTargDf.loc[row]["Price"])
             discount = ("%.2f" % round(offerTargDf.loc[row]["Discount"], 2))
             discount_cell_class = "green"
             if(float(discount) >= 50):

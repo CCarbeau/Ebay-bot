@@ -3,7 +3,7 @@ import numpy as np
 from getJson import getJSON
 
 bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP","you", "Your","You", "YOUR", "YOU", "⚾(pick)", "pick)"]
-bannedBaseWords = ["you", "You", "Your", "YOUR", "YOU"]
+bannedBaseWords = ["you", "You", "Your", "YOUR", "YOU", "Pick)"]
 
 # Method that returns the lowest buy now prices for an "item" in a dataFrame that includes the items title, price, and eBay link
 def currPrice(token, item, condition, auto):

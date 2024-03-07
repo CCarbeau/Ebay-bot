@@ -16,13 +16,13 @@ import pandas as pd
 
 def main():
     # Permission code from eBay 
-    token = "v^1.1#i^1#p^1#r^0#I^3#f^0#t^H4sIAAAAAAAAAOVYbWwURRju9UsLVIIoApF4LJAYYPdmd2/vbpfeJdcW7Fno1d5RsKAwtzfbW7pf3ZlreyjSFFOFgolE/CShIQSiJpBoYoKiBgKRqD9KCAqoifGHYoiJ0kCDkejetZS2Er56iU28P5eZeeed53nmfeedHdBZWrawu6Z7oNx1X2FvJ+gsdLnYyaCstGTRA0WFs0sKwAgDV2/n/M7irqILFRjqmiU1IGyZBkbuDl0zsJTrDFJp25BMiFUsGVBHWCKyFAuvWC5xDJAs2ySmbGqUO1IdpERFkAOKyPsgB1jOKzq9xnWfcTNIsbzo8wcSUAlwHC+zwBnHOI0iBibQIEGKA5yXBjwNhDjHS4IgsSLjEwJNlLsR2Vg1DceEAVQoB1fKzbVHYL01VIgxsonjhApFwsti0XCkemldvMIzwldoSIcYgSSNR7eqzCRyN0ItjW69DM5ZS7G0LCOMKU9ocIXRTqXwdTD3AD8nNUwkOAREv8grfj/y50XJZaatQ3JrGNkeNUkrOVMJGUQlmdsJ6oiR2IBkMtSqc1xEqt3Zv6fSUFMVFdlBamll+OlwfT0VqkrZKiYqpDGCtpyi6xuq6QREUBA4VqAFr4/zJlh+aJlBX0Maj1mnyjSSalYx7K4zSSVyMKOxynhHKOMYRY2oHVZIFs+wnS8O2GEF+absjg5uYZqkjOymIt2RwZ1r3l7/4dmE2GoiTdCwh7EDOYGcjbYsNUmNHcwF4lDsdOAglSLEkjye9vZ2pp1nTLvZwwHAelavWB6TU0iH1KBtNtcde/X2E2g1R0VGzkysSiRjOVg6nEB1ABjNVMgbEEURDOk+GlZobO+/OkZw9oxOh3ylhxMsiowAgMDnl5X85EdoKEQ9WRwoATO0Du0WRCwNyoiWnThL68hWkxIvKBwfUBCd9IkK7RUVhU4ISR/NKggBhBIJWQz8f9LkTgM9hmQbkXxFen6iXGxt6wizRLEr/UpjIO6UsqZFZiywoaq1oeHJyijy2NBbJwvcqtbm4J3mwk3JV2mqo0zcWT9vAmRzPS8i1JiYoOS46MVk00L1pqbKmYm1wbydrIc2ycSQpjkd4yIZtqxI3k7q/NC7q0Pi3ljntT79F7XppqxwNmAnFqvsfOw4gJbKZKsPI5u6x4TOtcMDs7luqetyqMfFW3WurBOKtUNykK2aHLxsMjnKDG6TGRthM20712wmmr19xc0WZDjVjNimpiG7kR13Nut6msCEhiZaWuchwFU4wUot6weiL8CJrDguXnKukK6baEdSHg/i4tDdXag9o7/tQwW5H9vlOga6XJ8VulygAixg54G5pUUri4umzMYqQYwKFQarzYbzyWojpgVlLKjahdMLLu3dVVM1e2n09YXPxTN973xRMGXE00LvM2Dm8ONCWRE7ecRLA3j0xkgJO/WRcs4LeCBwvCCwYhOYd2O0mJ1R/NDFN7+sW7JjlyesJ85rZVuvueMnL4LyYSOXq6SguMtVMOvUty9G3m6e0halpx/9YO3yT9fXnV3/3uZkmJyuTd2/76Pu57t/2SaKMbE/OGAF+kt31pbPj5zPDLSdiJ8wLh85+vWlz797/OGrW1/avrf05RP7xSuJk0+cemVgcc+H/NWab/afXuA3rjRWHDGSPbPOra3d/Nrlrx7b0j/gKvmdubCqr7nMv+T9HfqymtWRau/Onhfgx5V7Nn1S09K39cCcc+yvuw9rB+b07tm2EehzD787rfzwwbo+de/RVwXvmak9p7Y8eAZdS+3bPum3l36aefL4ph+jaw6tfOOvQ9/v6E39/McMEy/UV07bGPh7t7jm7Nymwtr+45uaD+7Z3vrDpGetYtM23lp8rDr95+Be/gOPv+S/9BEAAA=="
+    token = "v^1.1#i^1#I^3#p^1#f^0#r^0#t^H4sIAAAAAAAAAOVYXWwUVRTu9oeKpYJC0DQq64Ai4Ozcmdmf2aGdsP0Bami3dJeCjVLuzt5pp92dmc69S7tBYlNCg4EHqwIxGGgwSoLhBY0+oJiAWJSABEUThSce/EG0BUXjg3p3t5RtJfx1E5u4D7uZe8899/u+e849Zwf0TJm6sG953++ljuL8gR7Qk+9w8CVg6pSiRfcV5JcV5YEsA8dAz7yewt6C78sxjMcsuRFhyzQwcnbHYwaW04MVTMI2ZBNiHcsGjCMsE1UOBepWyIILyJZtElM1Y4yztrqC8QtevyR6vVLUDzSI6KBxzWXYrGAgkiJIE9WoD/qRBAQ6j3EC1RqYQINUMAIQ3CwQWeALC0AWfLLocXkksZlxNiEb66ZBTVyAUdJo5fRaOwvqzZFCjJFNqBNGqQ0sDQUDtdU19eFyLsuXMiJDiECSwGOfqswocjbBWALdfBuctpZDCVVFGDOcktlhrFM5cA3MXcBPKy1qPkkU+Yg3qkq8IEk5kXKpacchuTmO1IgeZbW0qYwMopPkrRSlakTakUpGnuqpi9pqZ+pnZQLGdE1HdgVTUxl4JtDQwChVbbaOiQ5ZjKCttrENjdVsBCLo8Qi8h/W4vYI7wosj22R8jYg8bp8q04jqKcmws94klYhiRuOV4bOUoUZBI2gHNJLCk20nXFPQJzWnjjRzhgnSZqROFcWpDM704631H11NiK1HEgSNehg/kRaIJo1l6VFm/GQ6EkeCpxtXMG2EWDLHdXV1ubpEl2m3cgIAPLembkVIbUNxyGRsU7lO7fVbL2D1NBWVJjG1l0nSoli6aaRSAEYro7glv98PRnQfC0sZP/qvgSzO3Nh8yFV+CCAqQQ8veEQA6FckF/mhjIQol8KBIjDJxqHdgYgVgypiVRpniTiy9Sj1pQmipCE26vVrrNuvaWzEE/WyvIYQQCgSUf3S/ydNbjfQQ0i1EclVpOcmyv2d67sDPNHsSp/WJIVpLWteZIak9qrOxsanK4OIs6G7XvUIqztbK243F25IviqmU2XCdP+cCZDK9ZyIsNzEBEUnRC+kmhZqMGO6mpxcByza0QZok2QIxWJ0YEIkA5ZVm7ObOjf07uiSuDvWOa1P/0VtuiErnArYycUqtR5TB9DSXanq41LNOGdC2nZwMJXrlt6SRj0h3jrtWScVa0oyw1aPZppNV5qyC69XXTbCZsKmfbYrmOq+wmYHMmg1I7YZiyG7iZ9wNsfjCQIjMTTZ0joHAa7DSVZqeR/wS25R8HgmxEtNF9KWyXYl5fAiLlTurKHmxv63V/LSH77XcQT0Og7nOxygHDzOzwWPTSlYVVgwrQzrBLl0qLmw3mrQ/6w2cnWgpAV1O39m3uW925dXldUEdyzcEE6e3jWYNy3r1cLAc+Ch0ZcLUwv4kqw3DeDh6zNF/PQHSwU3EIGPto8+0dMM5l6fLeRnF8668OJ+dXjeS09UHiQnv954MP+DgXOXQemokcNRlFfY68ib/+3Z83PO+gbbN/Tu2PlYzcy9hXVzfpy77bvtmx29G4/+Vc9Yr1e/tcleEzozdITbOr/28DC+tOXdlev9SaV76GV3KcvNPxM83r2PO1oyvHZte/HnJYtODV98/p5k0YKu3xa/MfvA6VUnXlF+2D20oG/nqeKrHD4xa1/Jur8/XHyl/VmlYH9/NT4351Hl4qYv1/w6Y6j/0wOvRr5BJ+sGL23b0HJsq1jsWxI53rugaHhm3mcFlb+8d+y1XeuUq3saW87/fOH9pw71tfXc+05ZS8m5zj+/uF9tKDqufrT7jxc8Vz9ZHfSernogdqXrp44lnf2PNE9/ckZy4R7tq+rS8LLN5Yf7G4s/PrRl6O3BN5dlzvIf2eFjh/QRAAA="
     
     # Condition legend
     condition = {"Graded":"2750", "Ungraded":"4000"}
     
     date = datetime.now(timezone.utc)
-    timeRange = timedelta(hours=24)
+    timeRange = timedelta(hours=1)
 
     aucTargDf = pd.DataFrame(columns = ["Title", "Price", "Discount", "Link"])
     buyTargDf = pd.DataFrame(columns = ["Title", "Price", "Discount", "Link"])
@@ -30,13 +30,14 @@ def main():
     
     cards = createCards(condition)
     
-    # emailAddresses = ["cikoticz24@gmail.com","dominicpiz2@gmail.com","abby.samson@richmond.edu"]
+    #emailAddresses = ["cikoticz24@gmail.com","dominicpiz2@gmail.com","abby.samson@richmond.edu"]
     emailAddresses = ["cikoticz24@gmail.com"]
 
     for item in cards:
         prices = currPrice(token, item.name, item.cond, item.auto)
         auctions = currAucPrices(token, item.name, item.cond,(date+timeRange).isoformat()[:23])
         bestOffer = bestOffPrices(token, item.name, item.cond)
+        # print(prices)
 
         # Auction Targets 
         aucs = aucTargets(prices,auctions)
