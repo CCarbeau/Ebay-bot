@@ -8,8 +8,10 @@ Features:
 Notes: 
     - Allowed 5000 calls per day, make 2 calls per cycle, can search/compare 104 items per hour 
     - If algorithm only runs during waking hours (say 8 am - 1 am) can search/compare 147 items per hour
+    - Algorithm path: /Users/christian/Desktop/Personal/Projects/Ebay-bot/algo.py
 
 TODO: 
+    - Make email still send even without auction targets 
     - Add all and better search terms 
     - Adjust pricing for card lots
     - Make filter to get rid of pick your players items 
