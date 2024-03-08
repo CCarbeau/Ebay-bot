@@ -3,7 +3,7 @@ import numpy as np
 import math
 from model import buyNowModel
 
-bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP"]
+bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP", "Non-Auto"]
 
 # Takes in a dataframe of the market prices returned by prices
 # Takes in a dataframe of the current auctions prices from auctionSearch
@@ -15,14 +15,8 @@ def aucTargets(marketPrices, auctionPrice):
     value = 0
     if(len(marketPrices)==0):
         return deals
-    elif(len(marketPrices)<5):
-        for i in range(len(marketPrices)):
-            value = value + marketPrices.iloc[i]["Price"]
-        value = value/len(marketPrices)
     else:
-        for i in range(5):
-            value = value + marketPrices.iloc[i]["Price"]
-        value = value/5
+        value = marketPrices.iloc[0]["Price"]
     
     ids = []
     price = pd.Series()

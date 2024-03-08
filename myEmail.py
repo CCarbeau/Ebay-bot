@@ -74,9 +74,9 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
           price = "{:0.2f}".format(aucTargDf.loc[row]["Price"])
           discount = ("{:0.2f}".format(aucTargDf.loc[row]["Discount"]))
           discount_cell_class = "green"
-          if(float(discount) >= 50):
+          if(float(discount) >= 25):
               discount_cell_class="discount-cell-green"
-          elif(float(discount) >= 35):
+          elif(float(discount) >= 15):
               discount_cell_class="discount-cell-light-green"
           else: 
               discount_cell_class="discount-cell-yellow"
@@ -101,75 +101,6 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
       """
       email.attach(MIMEText(html_content,"html")) 
             
-    # BUY NOW TARGETS: 
-    # Create body of the email: 
-    html_content = """\
-<html>
-<head>
-<title>Buy Now Targets</title>
-<style>
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
-}
-</style>
-<style>
-td.discount-cell-green {
-  background-color: rgba(0, 255, 0, 1);
-}
-td.discount-cell-light-green {
-  background-color: rgba(0, 255, 0, 0.5);
-}
-td.discount-cell-yellow {
-  background-color: rgba(255, 255, 0, 1);
-}
-</style>
-</head>
-<body>
-<h2>Buy Now Targets</h2>
-<table>
-<tr>
-  <th>Item</th>
-  <th>Price</th>
-  <th>Discount</th>
-  <th>Link</th>
-</tr>
-"""
-    # Add rows dynamically
-    for row, value in buyTargDf.iterrows():
-        item = buyTargDf.loc[row]["Title"]
-        price = "{:0.2f}".format(buyTargDf.loc[row]["Price"])
-        discount = ("%.2f" % round(buyTargDf.loc[row]["Discount"], 2))
-        discount_cell_class = "green"
-        if(float(discount) >= 50):
-            discount_cell_class="discount-cell-green"
-        elif(float(discount) >= 35):
-            discount_cell_class="discount-cell-light-green"
-        else: 
-            discount_cell_class="discount-cell-yellow"
-        link = buyTargDf.loc[row]["Link"]
-        html_content += f"""
-        <tr>
-          <td>{item}</td>
-          <td>{price}</td>
-          <td class ={discount_cell_class}>{discount}</td>
-          <td><a href="{link}">Link</a></td>
-        </tr>
-        """
-
-    # Close the table and HTML body
-    html_content += """
-      </table>
-    </body>
-    </html>
-    """
-    email.attach(MIMEText(html_content,"html")) 
-
     # BEST OFFER TARGETS: 
     # Create body of the email: 
     html_content = """\
@@ -215,13 +146,81 @@ td.discount-cell-yellow {
         price = "{:0.2f}".format(offerTargDf.loc[row]["Price"])
         discount = ("%.2f" % round(offerTargDf.loc[row]["Discount"], 2))
         discount_cell_class = "green"
-        if(float(discount) >= 50):
+        if(float(discount) >= 25):
             discount_cell_class="discount-cell-green"
-        elif(float(discount) >= 35):
+        elif(float(discount) >= 15):
             discount_cell_class="discount-cell-light-green"
         else: 
             discount_cell_class="discount-cell-yellow"
         link = offerTargDf.loc[row]["Link"]
+        html_content += f"""
+        <tr>
+          <td>{item}</td>
+          <td>{price}</td>
+          <td class ={discount_cell_class}>{discount}</td>
+          <td><a href="{link}">Link</a></td>
+        </tr>
+        """
+    # Close the table and HTML body
+    html_content += """
+      </table>
+    </body>
+    </html>
+    """
+    email.attach(MIMEText(html_content,"html")) 
+
+    # BUY NOW TARGETS: 
+    # Create body of the email: 
+    html_content = """\
+<html>
+<head>
+<title>Buy Now Targets</title>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+</style>
+<style>
+td.discount-cell-green {
+  background-color: rgba(0, 255, 0, 1);
+}
+td.discount-cell-light-green {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+td.discount-cell-yellow {
+  background-color: rgba(255, 255, 0, 1);
+}
+</style>
+</head>
+<body>
+<h2>Buy Now Targets</h2>
+<table>
+<tr>
+  <th>Item</th>
+  <th>Price</th>
+  <th>Discount</th>
+  <th>Link</th>
+</tr>
+"""
+    # Add rows dynamically
+    for row, value in buyTargDf.iterrows():
+        item = buyTargDf.loc[row]["Title"]
+        price = "{:0.2f}".format(buyTargDf.loc[row]["Price"])
+        discount = ("%.2f" % round(buyTargDf.loc[row]["Discount"], 2))
+        discount_cell_class = "green"
+        if(float(discount) >= 25):
+            discount_cell_class="discount-cell-green"
+        elif(float(discount) >= 15):
+            discount_cell_class="discount-cell-light-green"
+        else: 
+            discount_cell_class="discount-cell-yellow"
+        link = buyTargDf.loc[row]["Link"]
         html_content += f"""
         <tr>
           <td>{item}</td>
@@ -238,6 +237,7 @@ td.discount-cell-yellow {
     </html>
     """
     email.attach(MIMEText(html_content,"html")) 
+
     context = ssl.create_default_context()
 
     for address in emailAddresses:

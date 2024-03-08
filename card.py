@@ -117,6 +117,7 @@ def createCards(condition):
         
         # Samuel Basallo: 
             card("2023 Bowman Chrome Samuel-Basallo 1st auto PSA 10",condition["Graded"], True),
+            card("2023 Bowman Chrome Samuel-Basallo 1st Refractor auto PSA 10",condition["Graded"], True),
             card("2023 Bowman Chrome Samuel-Basallo 1st auto",condition["Ungraded"], True),
         
         # Evan Carter: 

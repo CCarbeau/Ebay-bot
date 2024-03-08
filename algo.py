@@ -1,7 +1,6 @@
 # Internal libraries
 from auctionSearch import currAucPrices
 from prices import currPrice
-from bestOffer import bestOffPrices
 from myEmail import email
 from analyze import aucTargets
 from analyze import buyNowTargets
@@ -18,14 +17,14 @@ import pandas as pd
 def main():
 
     # Permission code from eBay 
-    token = getToken()
-    # token = "v^1.1#i^1#r^0#f^0#p^1#I^3#t^H4sIAAAAAAAAAOVYb2wURRTvXVuw0vonoNRGzHUpkED2bvb2/u3aO732SnoCbekdVZsgmdubbZfu7S47c7QXjClFEEyM0YB8oIFaSFBiKKjRSIgxGiBIIIrGSDQRNICfIPEDBLTG2W0p10r410ts4n257Js3b97vN+/NezOgd1rZwk2Nm65WOKY7B3pBr9Ph4GaAsmmlix4qdlaVFoE8BcdAb01vSV/x77UYZlRDbEXY0DWMXD0ZVcOiLQwzWVMTdYgVLGowg7BIJDERXbZU9LqBaJg60SVdZVzxWJjx+mUIOcgLaR7yUtBPpdoNm0k9zMgCCMkgBSQhFeRSkkDHMc6iuIYJ1AidD7w+FvAsCCWBV+RDIuDdASHQzrjakIkVXaMqbsBEbHdFe66Z5+vtXYUYI5NQI0wkHl2caI7GYw1NyVpPnq3IKA8JAkkWj/+q19PI1QbVLLr9MtjWFhNZSUIYM57IyArjjYrRG87ch/s21YKPFzhKNPABngOCXBAqF+tmBpLb+2FJlDQr26oi0ohCcndilLKRWo0kMvrVRE3EYy7rb3kWqoqsIDPMNNRFX4y2tDCR+k5TwUSBLEbQlDrZltYYm4II+v1ezs/6fQGvL8Xxo8uM2BolecI69bqWVizKsKtJJ3WI+owmMuPNY4YqNWvNZlQmlj/5er4xBrl2a0tH9jBLOjVrV1GG0uCyP+/M/9hsQkwllSVozMLEAZugMAMNQ0kzEwftSBwNnh4cZjoJMUSPp7u7293Nu3Wzw+MFgPO8sGxpQupEGcjYulauW/rKnSewig1FQnQmVkSSM6gvPTRSqQNaBxPxhQRBAKO8j3crMlH6L0EeZs/4fChUfgS9QV8I8iFJlmQgBdKFyI/IaIh6LD9QCubYDDS7EDFUKCFWonGWzSBTSYu8X/byIRmx6YAgsz5BltmUPx1gORkhgFCKHn2h/0+a3G2gJ5BkIlKgSC9QlAtr1vZEOSKbdUG5LZSktax9kZ4Ira5f09r6XF0z8pjQ1yT5vc+v6QjfbS7cEny9qlBmknT9QhFg5XphSGjUMUHpScFLSLqBWnRVkXJTa4N5M90CTZJLIFWlgkmBjBpGvFAndYHg3dMhcX+oC1mf/pPadEtU2ArYqYXKmo+pAWgobqv6uCU949EhbTs8Vq5T8Srb60nhVmjPOqVQU5AjaJX0SLPptiG78VrJbSKsZ03aZ7ubre4rqXchjVYzYuqqisw2btLZnMlkCUypaKqldQECXIFTrNRyQSCEAn5faHLHkWQX0lVT7Ugq3EFc8sw9NtSe8Zf7SJH94/ocX4I+x+dOhwPUgnncXFA9rXhFSXF5FVYIcitQdmOlQ6N3VhO5u1DOgIrpnFn0x+C2xvqqhuZ3Fq5L5r7ZcayoPO9tYWAlqBx7XSgr5mbkPTWAJ2+OlHIPz67w0psrCAHaKAO+Hcy9OVrCPV4ya9+hos1z9l+8VP7IR87k+Uvdr1/r8YGKMSWHo7SopM9RlHspXLwnNvzB/t9i9TVPH+haUjnfX7H+xKOnwd8HHgvOf7VjxtWZFTsuH+kfvjAvUJvcX/frm0vf+vTY5kPxjT8gZlfl9rMRdZu6O2l8uJbLfNu/YYteXTL05zYut/HMuy1fhw+Wf7ar5vCPw9tP97v2fhE09l0/ezLhWXLk+iflT7iOn9kweO3KiiFl+4KjsQs7L/c69aG935dXX3G9N3RgbkP1ypoH8YKhwcZTT52bvmXdrKO9m5cPd4izT/50PhlZ99pJrmzP4fcPvhF2bHG+9vYv38UEdl//4MVnM1urxa/A0Z/nnKheWFp5rsq1y3dqN975wFXmDD/4VzJYVbd+5tZXQvj4wJyXUx+P7OU/yh0WnvURAAA="
+    # token = getToken()
+    token = "v^1.1#i^1#I^3#p^1#f^0#r^0#t^H4sIAAAAAAAAAOVYbWwURRju9QMopfijREwD9ViKicW9m927ve4tvQvXD+hhv+wdhRYJzO7Otkv3drc7c7QNRJoaCRLRHwghggYLiBoJpkYjIpAIIgYMaDAhJCIJGvEHJWkMiCHGvWsp10r46iU28f5cZuadd57nmfedd3ZAz6Tcko3VG2/mOyZn7u4BPZkOB5MHciflzJ+elVmYkwFSDBy7e4p7snuzrpZhGNNMoRFh09AxcnbFNB0Lyc4AFbd0wYBYxYIOYwgLRBIiodoagXUBwbQMYkiGRjnDlQFKljmJhQCWenw8EGWP3avf8Rk1AhSUJEVErOgFPuj3I2CPYxxHYR0TqJMAxQLWSwMPDfgo4xNYn8DxLs7HtVDOJmRh1dBtExeggkm4QnKulYL1/lAhxsgithMqGA4titSHwpVVddEyd4qv4LAOEQJJHI9uVRgycjZBLY7uvwxOWguRuCQhjCl3cGiF0U6F0B0wjwE/KbUIGL/i4VmfiHi5lE+LkosMKwbJ/WEkelSZVpKmAtKJSrofJKgthrgGSWS4VWe7CFc6E38vxKGmKiqyAlRVeag51NBABSvaLBUTFdIYQUtqoxsaK2kRIshxLMPRnNfHekXGM7zMkK9hjcesU2HosppQDDvrDFKObMxorDJMijK2Ub1eb4UUksCTasffUZDztyR2dGgL46RNT2wqitkyOJPNB+s/MpsQSxXjBI14GDuQFMjOGdNUZWrsYDIQh2OnCweoNkJMwe3u7Ox0dXpchtXqZgFg3MtrayJSG4pBasg2keu2vfrgCbSapCIheyZWBdJt2li67EC1AeitVNDL+/1+MKz7aFjBsb3/6kjh7B6dDulKD84jAcnPKqVeySP6OC4d+REcDlF3AgcSYTcdg1Y7IqYGJURLdpzFY8hSZcHDKayHVxAt+/wK7fUrCi1yso9mFIQAQqIo+fn/T5o8bKBHkGQhkq5IT0+U+zvWdoUYoljlpUoTH7VLWct8I8KvqehobFxSXo/cFvTWSRy7rKM18LC5cE/yFZpqKxO110+bAIlcT4sI1QYmSB4XvYhkmKjB0FSpe2JtsMeSG6BFuiNI0+yOcZEMmWY4bSd1eug90iHxeKzTWp/+i9p0T1Y4EbATi1ViPrYdQFN1JaqPSzJibgPa1w43TOS6qa5Koh4Xb9W+sk4o1jbJIbaqPHTZdCUpu/BayWUhbMQt+5rtqk/cvqJGO9LtakYsQ9OQ1cSMO5tjsTiBooYmWlqnIcBVOMFKLVMK/H7GPpf4cfGSkoV01UQ7ktJ4EGcHH+1C7R79bR/MSP6YXsdXoNdxNNPhAGVgHjMXzJmUtTQ7a1ohVglyqVBxYbVVtz9ZLeRqR90mVK3MgozBvm3VFYVV9dtL1kW7z+38JmNaytPC7pXgqZHHhdwsJi/lpQHMujuSwzwxM5/1Ag/gGR/r4/gWMPfuaDbzZPaMjjkXT/2xYrBx/cylRQ3bQgeWH16RC/JHjByOnIzsXkfGS839r7Wtz+q77j1VXHbeefX5i+GnYwt3be5vp4/INxf4ll1ZtaOgZ/+HHw/27R8oPq38WPRydZnzzcuzzy148dbZw9Nnf1fTfNAK9ZunF577dMeRnW9Q+77YcfLvy7M6AjP+OnSs9YLzlyt7rrW9+swPk3/etyHk8hSc3bSr+fr7l/Nu75XJ3jVS/7zai/mLS0zq7bfaazfdmrIBFHxwadeNviNflrwztarq830DJ07+vuS29/iZgTmLnz3Rr302WHKwtu78b8fN1T1T2w9pv54Kt5QeqDkzpUhrv9QaXT5w/pOPwj9trr2WtefG6pXHtuTiC7NeObr9ua3C1j+9hd+uO/te5+Tizd+/+3rR11u4tUN7+Q/2XbBa9BEAAA=="
     
     # Condition legend
     condition = {"Graded":"2750", "Ungraded":"4000"}
     
     date = datetime.now(timezone.utc)
-    timeRange = timedelta(hours=1)
+    timeRange = timedelta(hours=2)
 
     aucTargDf = pd.DataFrame(columns = ["Title", "Price", "Discount", "Link"])
     buyTargDf = pd.DataFrame(columns = ["Title", "Price", "Discount", "Link"])
@@ -39,11 +38,12 @@ def main():
     for item in cards:
         prices = currPrice(token, item.name, item.cond, item.auto)
         auctions = currAucPrices(token, item.name, item.cond,(date+timeRange).isoformat()[:23])
-        bestOffer = bestOffPrices(token, item.name, item.cond)
+        # bestOffer = bestOffPrices(token, item.name, item.cond)
+        
         # print(prices)
 
         # Auction Targets 
-        aucs = aucTargets(prices,auctions)
+        aucs = aucTargets(prices[0],auctions)
         # print("Auction Targets")
         # print(aucs)
         if(len(aucTargDf)==0 and len(aucs)!=0):
@@ -53,7 +53,7 @@ def main():
             aucTargDf = aucTargDf.reset_index(drop=True)
 
         # Buy Now Targets:
-        buyNow = buyNowTargets(prices)
+        buyNow = buyNowTargets(prices[2])
         # print("Buy now targets")
         # print(buyNow)
         if(len(buyNow)!=0 and len(buyTargDf)==0):
@@ -63,7 +63,7 @@ def main():
             buyTargDf = buyTargDf.reset_index(drop=True)
 
         # Best Offer Targets;
-        offers = offerTargets(prices,bestOffer)
+        offers = offerTargets(prices[0],prices[1])
         # print("Offer targets")
         # print(offers)
         if (len(offers)!=0 and len(offerTargDf)==0):
