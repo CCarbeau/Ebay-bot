@@ -15,5 +15,4 @@ TODO:
     - Add all and better search terms 
     - Adjust pricing for card lots
     - Change value generating algorithm
-    - Combine the prices and best offer methods so that you only need one get request and return an array of dataframes
-    containing the prices, bestOffer items, and non-best-offer-buy-now items
+    - Review the new prices algorithm to see if everything is working correctly
