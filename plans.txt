@@ -12,13 +12,5 @@ Notes:
     - Company name: Kryptos 
 
 TODO: 
-    - Make email still send even without auction targets 
     - Add all and better search terms 
     - Adjust pricing for card lots
-    - Make filter to get rid of pick your players items 
-    - Find a way to filter out "non auto" titles from the prices page
-    - Figure out how to handle outlier prices (weighted average method isn't really working)
-        - Idea for above: Add a boolean value to the card class that represents if the search is an auto or not 
-        and then can filter by that in the price algorithm 
-
-NEXT ACTION ITEM: FIX PRICING ALGORITHM TO HANDLE OUTLIERS
