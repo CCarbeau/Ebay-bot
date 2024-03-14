@@ -3,7 +3,7 @@ import numpy as np
 from getJson import getJSON
 from model import pricingModel
 
-bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP","you", "Your","You", "YOUR", "YOU", "⚾(pick)", "pick)", "Non-Auto"]
+bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP","you", "Your","You", "YOUR", "YOU", "⚾(pick)", "pick)", "Non-Auto","MYSTERY"]
 bannedBaseWords = ["you", "You", "Your", "YOUR", "YOU", "Pick)"]
 
 # Method that returns the lowest buy now prices for an "item" in a dataFrame that includes the items title, price, and eBay link
@@ -139,20 +139,24 @@ def currPrice(token, item, condition, auto):
 
         # Create dataFrame with the series created in the loop above
         prices = pd.DataFrame(columns = ["Title", "Price", "Link"])
-        prices["Title"]=pricesIDs
-        prices["Price"]=pricesPrices
-        prices["Link"]=pricesLinks
 
         bestOffer = pd.DataFrame(columns = ["Title", "Price", "Link"])
-        bestOffer["Title"]=bestOfferIDs
-        bestOffer["Price"]=bestOfferPrices
-        bestOffer["Link"]=bestOfferLinks
 
         buyNow = pd.DataFrame(columns = ["Title", "Price", "Link"])
-        buyNow["Title"]=buyNowIDs
-        buyNow["Price"]=buyNowPrices
-        buyNow["Link"]=buyNowLinks
-
+       
+        if(len(pricesIDs)!=0):       
+            prices["Title"]=pricesIDs
+            prices["Price"]=pricesPrices
+            prices["Link"]=pricesLinks
+                
+            bestOffer["Title"]=bestOfferIDs
+            bestOffer["Price"]=bestOfferPrices
+            bestOffer["Link"]=bestOfferLinks
+            
+            buyNow["Title"]=buyNowIDs
+            buyNow["Price"]=buyNowPrices
+            buyNow["Link"]=buyNowLinks
+        
         ret = [prices,bestOffer,buyNow]
 
         return ret

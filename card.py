@@ -7,7 +7,7 @@ class card():
 def createCards(condition):
     cards = [
         # Anthony Volpe: 
-            card("2023 Topps Chrome Anthony-Volpe Refractor PSA 10",condition["Graded"], False),
+            card("2023 Topps Chrome Anthony-Volpe Refractor 4 PSA 10",condition["Graded"], False),
             card("2023 Topps Chrome Anthony-Volpe X-fractor PSA 10",condition["Graded"], False),
             card("2023 Topps Chrome Anthony-Volpe Prism Refractor 4 PSA 10",condition["Graded"], False),
             card("2023 Topps Chrome Sapphire Anthony-Volpe 460 PSA 10",condition["Graded"], False),
@@ -108,9 +108,6 @@ def createCards(condition):
             card("2020 Bowman Draft Colt-Keith 1st auto PSA 10",condition["Graded"], True),
             card("2020 Bowman Draft Colt-Keith 1st auto",condition["Ungraded"], True),
         
-        # Noelvi Marte:
-            card("2019 Bowman Chrome Noelvi-Marte 1st auto PSA 10",condition["Graded"], True),
-        
         # Pete Crow Armstrong: 
             card("2020 Bowman Chrome Draft Pete-Crow-Armstrong 1st auto PSA 10",condition["Graded"], True), 
             card("2020 Bowman Draft Pete-Crow-Armstrong 1st auto",condition["Ungraded"], True), 
@@ -190,6 +187,10 @@ def createCards(condition):
         # Mookie Betts:
             card("2014 Bowman Chrome BCP Mookie-Betts PSA 10", condition["Graded"], False),
             card("2014 Topps Update Mookie-Betts 26 PSA 10", condition["Graded"], False),
+
+        # Mike Trout:
+            card("2011 Topps Update Mike-Trout PSA 10", condition["Graded"], False),
+            card("2011 Topps Update Mike-Trout", condition["Ungraded"], False),
         
         # Victor Wembanyama:
             card("2023 Prizm Draft Victor-Wembanyama PSA 10", condition["Graded"], False),
@@ -199,9 +200,33 @@ def createCards(condition):
             card("2023 Panini Donruss C.J.-Stroud 339 PSA 10", condition["Graded"], False),
             card("2023 Panini Prizm 339 CJ-Stroud PSA 10", condition["Graded"],False),
             card("2023 Panini Prizm CJ-Stroud-339", condition["Ungraded"],False),
+
+        # Cheap Autos
+            card("2023 Bowman Draft 1st Auto PSA 10", condition["Graded"], True),
+            card("2023 Bowman Chrome 1st Auto PSA 10", condition["Graded"], True),
+            card("2022 Bowman Draft 1st Auto PSA 10", condition["Graded"], True),
+            card("2022 Bowman Chrome 1st Auto PSA 10", condition["Graded"], True),
+            card("2021 Bowman Draft 1st Auto PSA 10", condition["Graded"], True),
+            card("2021 Bowman Chrome 1st Auto PSA 10", condition["Graded"], True),
+            card("2020 Bowman Draft 1st Auto PSA 10", condition["Graded"], True),
+            card("2020 Bowman Chrome 1st Auto PSA 10", condition["Graded"], True),
+            card("2024 Topps Baseball Auto PSA 10", condition["Graded"], True),
+            card("2023 Topps Chrome Baseball Auto PSA 10", condition["Graded"], True),
+            card("2023 Topps Baseball Auto PSA 10", condition["Graded"], True),
+            card("2022 Topps Chrome Baseball Auto PSA 10", condition["Graded"], True),
+            card("2022 Topps Baseball Auto PSA 10", condition["Graded"], True),
+            card("2021 Topps Chrome Baseball Auto PSA 10", condition["Graded"], True),
+            card("2021 Topps Baseball Auto PSA 10", condition["Graded"], True),
+            card("2020 Topps Chrome Baseball Auto PSA 10", condition["Graded"], True),
+            card("2020 Topps Baseball Auto PSA 10", condition["Graded"], True),
+            card("2019 Topps Chrome Baseball Auto PSA 10", condition["Graded"], True),
+            card("2019 Topps Baseball Auto PSA 10", condition["Graded"], True),
+            card("2018 Topps Chrome Baseball Auto PSA 10", condition["Graded"], True),
+            card("2018 Topps Baseball Auto PSA 10", condition["Graded"], True),
+            
             
             # yamamoto, 
-            # mike trout, jram, yordan, harper, lindor, tatis, verlander, scherzer, kershaw,
+            # jram, yordan, harper, lindor, tatis, verlander, scherzer, kershaw,
             # bedard, paolo, puka, purdy, anthony edwards, haliburton 
             ]
     return cards

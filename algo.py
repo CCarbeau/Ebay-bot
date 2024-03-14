@@ -17,8 +17,8 @@ import pandas as pd
 def main():
 
     # Permission code from eBay 
-    # token = getToken()
-    token = "v^1.1#i^1#I^3#p^1#f^0#r^0#t^H4sIAAAAAAAAAOVYbWwURRju9QMopfijREwD9ViKicW9m927ve4tvQvXD+hhv+wdhRYJzO7Otkv3drc7c7QNRJoaCRLRHwghggYLiBoJpkYjIpAIIgYMaDAhJCIJGvEHJWkMiCHGvWsp10r46iU28f5cZuadd57nmfedd3ZAz6Tcko3VG2/mOyZn7u4BPZkOB5MHciflzJ+elVmYkwFSDBy7e4p7snuzrpZhGNNMoRFh09AxcnbFNB0Lyc4AFbd0wYBYxYIOYwgLRBIiodoagXUBwbQMYkiGRjnDlQFKljmJhQCWenw8EGWP3avf8Rk1AhSUJEVErOgFPuj3I2CPYxxHYR0TqJMAxQLWSwMPDfgo4xNYn8DxLs7HtVDOJmRh1dBtExeggkm4QnKulYL1/lAhxsgithMqGA4titSHwpVVddEyd4qv4LAOEQJJHI9uVRgycjZBLY7uvwxOWguRuCQhjCl3cGiF0U6F0B0wjwE/KbUIGL/i4VmfiHi5lE+LkosMKwbJ/WEkelSZVpKmAtKJSrofJKgthrgGSWS4VWe7CFc6E38vxKGmKiqyAlRVeag51NBABSvaLBUTFdIYQUtqoxsaK2kRIshxLMPRnNfHekXGM7zMkK9hjcesU2HosppQDDvrDFKObMxorDJMijK2Ub1eb4UUksCTasffUZDztyR2dGgL46RNT2wqitkyOJPNB+s/MpsQSxXjBI14GDuQFMjOGdNUZWrsYDIQh2OnCweoNkJMwe3u7Ox0dXpchtXqZgFg3MtrayJSG4pBasg2keu2vfrgCbSapCIheyZWBdJt2li67EC1AeitVNDL+/1+MKz7aFjBsb3/6kjh7B6dDulKD84jAcnPKqVeySP6OC4d+REcDlF3AgcSYTcdg1Y7IqYGJURLdpzFY8hSZcHDKayHVxAt+/wK7fUrCi1yso9mFIQAQqIo+fn/T5o8bKBHkGQhkq5IT0+U+zvWdoUYoljlpUoTH7VLWct8I8KvqehobFxSXo/cFvTWSRy7rKM18LC5cE/yFZpqKxO110+bAIlcT4sI1QYmSB4XvYhkmKjB0FSpe2JtsMeSG6BFuiNI0+yOcZEMmWY4bSd1eug90iHxeKzTWp/+i9p0T1Y4EbATi1ViPrYdQFN1JaqPSzJibgPa1w43TOS6qa5Koh4Xb9W+sk4o1jbJIbaqPHTZdCUpu/BayWUhbMQt+5rtqk/cvqJGO9LtakYsQ9OQ1cSMO5tjsTiBooYmWlqnIcBVOMFKLVMK/H7GPpf4cfGSkoV01UQ7ktJ4EGcHH+1C7R79bR/MSP6YXsdXoNdxNNPhAGVgHjMXzJmUtTQ7a1ohVglyqVBxYbVVtz9ZLeRqR90mVK3MgozBvm3VFYVV9dtL1kW7z+38JmNaytPC7pXgqZHHhdwsJi/lpQHMujuSwzwxM5/1Ag/gGR/r4/gWMPfuaDbzZPaMjjkXT/2xYrBx/cylRQ3bQgeWH16RC/JHjByOnIzsXkfGS839r7Wtz+q77j1VXHbeefX5i+GnYwt3be5vp4/INxf4ll1ZtaOgZ/+HHw/27R8oPq38WPRydZnzzcuzzy148dbZw9Nnf1fTfNAK9ZunF577dMeRnW9Q+77YcfLvy7M6AjP+OnSs9YLzlyt7rrW9+swPk3/etyHk8hSc3bSr+fr7l/Nu75XJ3jVS/7zai/mLS0zq7bfaazfdmrIBFHxwadeNviNflrwztarq830DJ07+vuS29/iZgTmLnz3Rr302WHKwtu78b8fN1T1T2w9pv54Kt5QeqDkzpUhrv9QaXT5w/pOPwj9trr2WtefG6pXHtuTiC7NeObr9ua3C1j+9hd+uO/te5+Tizd+/+3rR11u4tUN7+Q/2XbBa9BEAAA=="
+    token = getToken()
+    # token = "v^1.1#i^1#r^0#f^0#I^3#p^1#t^H4sIAAAAAAAAAOVYa2wUVRTebbc1taAGCmglug4qApnZmd2Z7s6ku7htKSyPdukuBapQ7szcaYfuzixz79KuolmrIEgFXxCSJjw0Jj5CYpSEQCrIQ0j8YYj+QFGBKDEYeQRJwBh/ODNdyrYSXt3EJu6fzZx77rnf991z7rkzdLa0bOqaWWuujnbeU7Q9S2eLnE6mnC4rLZl2X3FRZYmDznNwbs8+nnV1F5+tRiCZSAlNEKV0DUF3VzKhIcE2Bom0oQk6QCoSNJCESMCSEAvPmyt4KVpIGTrWJT1BuCN1QULiFEkEilglKpK/ipVNq3YtZlwPEoDxAa+oAOD3S4pPUsxxhNIwoiEMNBwkvLSXJWkfybBxhhc4TmA4iuP9LYS7GRpI1TXThaKJkA1XsOcaeVhvDhUgBA1sBiFCkXB9rDEcqZvREK/25MUK5XSIYYDTaPBTrS5DdzNIpOHNl0G2txBLSxJEiPCE+lcYHFQIXwNzF/BtqQM8QwdYjoV+BXC8LBdEynrdSAJ8cxyWRZVJxXYVoIZVnLmVoqYa4nIo4dxTgxkiUue2/uanQUJVVGgEiRk14cXhaJQI1bYbKsIqIBEEhtRORpvqSBFAwHFehiM5tsrLiowvt0x/rJzIQ9ap1TVZtSRD7gYd10ATMxyqDJunjOnUqDUaYQVbePL8vMyAgr4Wa0v79zCN2zVrV2HSlMFtP95a/4HZGBuqmMZwIMLQAVsgs2hSKVUmhg7amZhLni4UJNoxTgkeT2dnJ9Xpo3SjzeOlacazaN7cmNQOk4Cwfa1at/zVW08gVZuKBM2ZSBVwJmVi6TIz1QSgtREhNsDzPJ3TfTCs0FDrvwx5nD2D66FQ9eFjvIriVXgxIPIK6+cKUR+hXIp6LBxQBBkyCYwOiFMJIEFSMvMsnYSGKgs+TvH6Agok5SpeIVleUUiRk6tIRoGQhlAUJT7w/ymT2030GJQMiAuU6QXKcn7Fyq4wgxWjxq80B+JmL2uZpscCy2tXNDXNrmmEHgOwDRLnXbiiLXi7tXBD8rUJ1VQmbq5fKAGsWi+MCLN0hKE8LHoxSU/BqJ5QpczI2mCfIUeBgTMxmEiYhmGRDKdSkUKd1AWid0eHxN2xLmR/+k960w1ZISthRxYraz4yA4CUSlndh5L0pEcH5rXDY9W6aW61UQ+Lt2reWUcUa5NkP1tV7r9sUjZlCq2UKAMiPW2Y92yq0bp9xfUOqJndDBt6IgGNZmbY1ZxMpjEQE3CklXUBElwFI6zVMn6GZtkqhuGGxUuyG2nrSDuSCncQu6bf4YXaM/jlPuSwf0y38yDd7dxX5HTS1fQTzCT6sdLiBa7iUZVIxZBSgUIhtU0z31kNSHXATAqoRtFYxx/vbppVWzmjcfPU5+OZY71HHaPyvi1sX0I/OPB1oayYKc/71EBPvD5Swtw/YbSXpX0My/Acx3At9KTroy5mvKvi46hRtqf86qrvXiur7nVc/nDn/pkP0KMHnJzOEoer2+mYP+XH57rXHfrs6NKt6EKPc+N815OruCnv1Z14YeGLm1Yf30a2L9v4wfpzax99+ND4LZ+81FCNZ58FjxzZteCtAxWejvbmtaP6XAfGnfi559gz5PtP9W2KrW9448DmyzvOn5vT9cUvX3+7YVFP4qErr59pHjP9witjdibHLjW+CmcWzxwT33L0+An/Qan1iufVDcrhikt/Xl7GnHz6m9Zdc8ZfPP3O9PqNbMWGCRf9xacvbd3WMWdH8tc+UPlm71+/j7t4SvTtbOJ/Sv92Khp5O7tv0eyPxNbJx+vXl5R3PXv6y91n/C/3/NA6cf/nf9MtpetK1e87rizZI987LUt0Hv7Uf/7k3slH6o7A3Xt7L7WN6+vfy38AoBsQjfURAAA="
     
     # Condition legend
     condition = {"Graded":"2750", "Ungraded":"4000"}
@@ -38,14 +38,10 @@ def main():
     for item in cards:
         prices = currPrice(token, item.name, item.cond, item.auto)
         auctions = currAucPrices(token, item.name, item.cond,(date+timeRange).isoformat()[:23])
-        # bestOffer = bestOffPrices(token, item.name, item.cond)
-        
-        # print(prices)
 
         # Auction Targets 
         aucs = aucTargets(prices[0],auctions)
-        # print("Auction Targets")
-        # print(aucs)
+        
         if(len(aucTargDf)==0 and len(aucs)!=0):
             aucTargDf = aucs
         elif(len(aucs!=0)):
@@ -54,8 +50,7 @@ def main():
 
         # Buy Now Targets:
         buyNow = buyNowTargets(prices[2])
-        # print("Buy now targets")
-        # print(buyNow)
+        
         if(len(buyNow)!=0 and len(buyTargDf)==0):
             buyTargDf = buyNow
         elif(len(buyNow)!=0):
@@ -64,8 +59,7 @@ def main():
 
         # Best Offer Targets;
         offers = offerTargets(prices[0],prices[1])
-        # print("Offer targets")
-        # print(offers)
+        
         if (len(offers)!=0 and len(offerTargDf)==0):
             offerTargDf = offers
         elif(len(offers)!=0):
