@@ -3,7 +3,7 @@ import numpy as np
 from getJson import getJSON
 from model import pricingModel
 
-bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP","you", "Your","You", "YOUR", "YOU", "⚾(pick)", "pick)", "Non-Auto","MYSTERY"]
+bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP","you", "Your","You", "YOUR", "YOU", "⚾(pick)", "pick)", "Non-Auto","MYSTERY", "Beckett"]
 bannedBaseWords = ["you", "You", "Your", "YOUR", "YOU", "Pick)"]
 
 # Method that returns the lowest buy now prices for an "item" in a dataFrame that includes the items title, price, and eBay link
@@ -148,14 +148,17 @@ def currPrice(token, item, condition, auto):
             prices["Title"]=pricesIDs
             prices["Price"]=pricesPrices
             prices["Link"]=pricesLinks
+            prices = prices.sort_values(by="Price")
                 
             bestOffer["Title"]=bestOfferIDs
             bestOffer["Price"]=bestOfferPrices
             bestOffer["Link"]=bestOfferLinks
+            bestOffer = bestOffer.sort_values(by="Price")
             
             buyNow["Title"]=buyNowIDs
             buyNow["Price"]=buyNowPrices
             buyNow["Link"]=buyNowLinks
+            buyNow = buyNow.sort_values(by="Price")
         
         ret = [prices,bestOffer,buyNow]
 

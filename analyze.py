@@ -3,8 +3,6 @@ import numpy as np
 import math
 from model import buyNowModel
 
-bannedAutoWords = ["Signed", "signed","SIGNED", "Non", "non", "IP", "Non-Auto"]
-
 # Takes in a dataframe of the market prices returned by prices
 # Takes in a dataframe of the current auctions prices from auctionSearch
 # Returns cards on auction that are underpriced
@@ -25,12 +23,10 @@ def aucTargets(marketPrices, auctionPrice):
     # Identify underpriced cards
     for i in range(len(auctionPrice)):
         if(auctionPrice.iloc[i]["Price"]<=0.75*value):
-            parse = auctionPrice.iloc[i]["Title"].split(" ")
-            if not any(x in parse for x in bannedAutoWords):
-                ids.append(auctionPrice.iloc[i]["Title"])
-                price[i] = auctionPrice.iloc[i]["Price"]
-                discount[i] = ((value - auctionPrice.iloc[i]["Price"])/value)*100
-                links.append(auctionPrice.iloc[i]["Link"])
+            ids.append(auctionPrice.iloc[i]["Title"])
+            price[i] = auctionPrice.iloc[i]["Price"]
+            discount[i] = ((value - auctionPrice.iloc[i]["Price"])/value)*100
+            links.append(auctionPrice.iloc[i]["Link"])
 
     deals["Price"] = price
     deals["Discount"] = discount
@@ -51,14 +47,12 @@ def buyNowTargets(marketPrices):
     links = []
     if(len(marketPrices)>=2):
         if(marketPrices.iloc[0]["Price"]<=buyNowModel(marketPrices.iloc[0]["Price"])*marketPrices.iloc[1]["Price"] and marketPrices.iloc[0]["Price"]<=.93*marketPrices.iloc[1]["Price"]):
-            parse = marketPrices.iloc[0]["Title"].split(" ")
-            if not any(x in parse for x in bannedAutoWords):
-                disc =  ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
-                if(disc<=30):
-                    ids.append(marketPrices.iloc[0]["Title"])
-                    price[0] = marketPrices.iloc[0]["Price"]
-                    discount[0] = ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
-                    links.append(marketPrices.iloc[0]["Link"])
+            disc =  ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
+            if(disc<=30):
+                ids.append(marketPrices.iloc[0]["Title"])
+                price[0] = marketPrices.iloc[0]["Price"]
+                discount[0] = ((marketPrices.iloc[1]["Price"] - marketPrices.iloc[0]["Price"])/marketPrices.iloc[1]["Price"])*100
+                links.append(marketPrices.iloc[0]["Link"])
     
     deals["Price"] = price
     deals["Discount"] = discount
@@ -74,28 +68,27 @@ def offerTargets(marketPrices, offerPrices):
 
     # Calculate the market price of a card (model is subject to change)
     value = 0
+    j = 0
     if(len(marketPrices)==0):
         return deals
-    elif(len(marketPrices)<5):
-        for i in range(len(marketPrices)):
-            value = value + ((len(marketPrices)-i)/((1+len(marketPrices))*.5*len(marketPrices)))*marketPrices.iloc[i]["Price"]
     else:
-        for i in range(5):
-            value = value + ((len(marketPrices)-i)/((1+len(marketPrices))*.5*len(marketPrices)))*marketPrices.iloc[i]["Price"]
-    
+        for i in range(len(marketPrices)):
+            if(marketPrices.iloc[0]["Price"]<=buyNowModel(marketPrices.iloc[0]["Price"])*marketPrices.iloc[i]["Price"]):
+                value = value + marketPrices.iloc[i]["Price"]
+                j = j + 1
+    value = value/j
+
     ids = []
     price = pd.Series()
     discount = pd.Series()
     links = []
     # Identify underpriced cards
     for i in range(len(offerPrices)):
-        if(offerPrices.iloc[i]["Price"]<=0.9*value):
-            parse = offerPrices.iloc[i]["Title"].split(" ")
-            if not any(x in parse for x in bannedAutoWords):
-                ids.append(offerPrices.iloc[i]["Title"])
-                price[i] = offerPrices.iloc[i]["Price"]
-                discount[i] = ((value - offerPrices.iloc[i]["Price"])/value)*100
-                links.append(offerPrices.iloc[i]["Link"])
+        if(offerPrices.iloc[i]["Price"]<=0.9*value and offerPrices.iloc[i]["Price"]>=.7*value):
+            ids.append(offerPrices.iloc[i]["Title"])
+            price[i] = offerPrices.iloc[i]["Price"]
+            discount[i] = ((value - offerPrices.iloc[i]["Price"])/value)*100
+            links.append(offerPrices.iloc[i]["Link"])
 
     deals["Price"] = price
     deals["Discount"] = discount
