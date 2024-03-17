@@ -73,10 +73,10 @@ def offerTargets(marketPrices, offerPrices):
         return deals
     else:
         for i in range(len(marketPrices)):
-            if(marketPrices.iloc[0]["Price"]<=buyNowModel(marketPrices.iloc[0]["Price"])*marketPrices.iloc[i]["Price"]):
+            if(marketPrices.iloc[0]["Price"]<=(buyNowModel(marketPrices.iloc[0]["Price"])+1)*marketPrices.iloc[i]["Price"]):
                 value = value + marketPrices.iloc[i]["Price"]
                 j = j + 1
-    value = value/j
+        value = value/j
 
     ids = []
     price = pd.Series()

@@ -14,7 +14,7 @@ from datetime import datetime,timezone,timedelta
 # Pandas
 import pandas as pd
 
-def main():
+def lambda_handler(event, context):
 
     # Permission code from eBay 
     token = getToken()
@@ -76,6 +76,8 @@ def main():
     offerTargDf = offerTargDf.reset_index(drop = True)
     
     email(emailAddresses,aucTargDf, buyTargDf, offerTargDf)
-
-if __name__ == "__main__":
-    main()
+    
+    return {
+        'statusCode': 200,
+        'body': 'Success'
+    }
