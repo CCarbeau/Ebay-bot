@@ -32,7 +32,7 @@ def lambda_handler(event, context):
     
     cards = createCards(condition)
     
-    #emailAddresses = ["cikoticz24@gmail.com","dominicpiz2@gmail.com","abby.samson@richmond.edu"]
+    # emailAddresses = ["cikoticz24@gmail.com","dominicpiz2@gmail.com","abby.samson@richmond.edu"]
     emailAddresses = ["cikoticz24@gmail.com"]
 
     for item in cards:

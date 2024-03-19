@@ -1,0 +1,7 @@
+TODO:
+    - Create the cards and works pages
+    - Link the home button back to index.html 
+    - Create logo and restructure heading/title area 
+    - Get domain and publish website
+    - Set up stripe for payments
+    - Link the emails received from stripe to a database that then links to the algorithm/backend

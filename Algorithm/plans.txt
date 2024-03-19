@@ -12,7 +12,5 @@ Notes:
     - Company name: Kryptos 
 
 TODO: 
-    - Add all and better search terms 
-    - Adjust pricing for card lots
-    - Change value generating algorithm
-    - Review the new prices algorithm to see if everything is working correctly
+    - Check why some "Signed" items are not being caught
+    - Make a website that will allow people to subscribe to the service and input their email
