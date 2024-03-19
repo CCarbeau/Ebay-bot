@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>Kryptos</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -24,11 +24,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="/w3images/avatar_smoke.jpg" style="width:100%">
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-user w3-xxlarge"></i>
     <p>HOW IT WORKS</p>
   </a>
@@ -57,33 +57,57 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small"></span> HOW IT WORKS</h1>
-    <p>Revolutionizing card flipping</p>
-    <img src="Images/Headshot.jpeg" alt="boy" class="w3-image" width="992" height="1108">
   </header>
 
-  <!-- About Section -->
+  <!-- Casual Level Email -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">Our Service</h2>
+    <h2 class="w3-text-light-grey">The Casual Subscription Email</h2>
     <hr style="width:200px" class="w3-opacity">
-    <p> We identify underpriced sports cards on eBay and notify our customers about them via email. An email is sent every 2 hours of the day 
-        containing a table of each underpriced card, how much we think its discounted, and an eBay link to the card. Our service will revolutionize
-        your card flipping game and boost profits. We cover over 200 sports cards of the hottest players, find the official list on the "Tracked Cards" page.
-        Base customers get to select 2 cards per month to have on the list and "Pro" level customers get to select 5. Our list is always changing to have the best 
-        and most desirable cards tracked for our customers. 
+    <img src="Images/demoEmail.png" alt="boy" class="w3-image" width="992" height="1108">
+    <p> Once you join, you will be sent an email every 2 hours that resembles the one shown above. Each auction target 
+      is an item ending within the next 2 hours that we determined as underpriced. The list of targets is sorted from most 
+      to least discounted. The link column on the far right sends you directly to the eBay auction page. See the target cards
+      page to see what cards we track.  
     </p>
 
+    <p>
+      NOTE: you should not buy every identified target. Some cards are mislabeled and 
+      give the card improper features. For example, some cards will say they are a Bowman 1st Auto but will be in-person signed cards.
+      We try to eliminate these mislabeled targets as much as possible, but sometimes they are labelled exactly as the targeted 
+      card would be so they slip through our filters.
+    </p>
+
+    <!-- Pro Level Email -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">The Pro Subscription Email</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <img src="Images/bestOfferEmail.png" alt="boy" class="w3-image" width="992" height="1108">
+    <img src="Images/buyNowEmail.png" alt="boy" class="w3-image" width="992" height="1108">
+    <p> The Pro Level Email has the same frequency, tracked cards, and auction targets as the Casual Level Email 
+      but also includes Best Offer and Buy Now Targets. These are items that we think are listed at the same or lower 
+      prices than their market value. The Best Offer targets will allow you to get a great deal by offering lower prices
+      than the already low buy now price. The Buy Now targets are items that are listed for significantly less than the 
+      next highest buy now item for that card. THERE ARE NO DUPLICATES BETWEEN THE BEST OFFER AND BUY NOW TABLES. 
+      The images above show what these sections look like. The tables for each will be added to the bottom of the email, 
+      you will not receive multiple emails at one time. 
+    </p>
+
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Email Stats</h2>
+    <hr style="width:200px" class="w3-opacity">
     <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">1000</span><br>
-        Deals Found 
+        <span class="w3-xlarge">2</span><br>
+        Hours between each email
       </div>
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">$20000</span><br>
-        Value Provided
+        <span class="w3-xlarge">20</span><br>
+        Auction Targets Per Email
       </div>
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
+        <span class="w3-xlarge">60</span><br>
+        Best Offer + Buy Now Targets Per Email
       </div>
       <div class="w3-quarter w3-section">
         <span class="w3-xlarge">200</span><br>
@@ -129,16 +153,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
     <!-- End Grid/Pricing tables -->
     </div>
-    
-    <!-- Testimonials -->
-    <h3 class="w3-padding-24 w3-text-light-grey">What Our Customers Think</h3>  
-    <img src="Images/3856.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">WOW Sportscards</span> Best LCS in New Jersey</p>
-    <p>This product is fantastic! Saved our store from bankrupcy</p><br>
-    
-    <img src="Images/NFT.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Bleecker Trading.</span> Best card store in NYC</p>
-    <p>Great service, couldn't recommend more!</p>
   <!-- End About Section -->
   </div>
 

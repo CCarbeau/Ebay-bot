@@ -12,5 +12,8 @@ Notes:
     - Company name: Kryptos 
 
 TODO: 
+    - Add bedard and mcdavid cards
+    - Add more baseball variations and curry,lebron,luka, big basketball player cards
+    - Add mahomes, lamar, burrow, hurts, and other big QB cards
     - Check why some "Signed" items are not being caught
     - Make a website that will allow people to subscribe to the service and input their email
