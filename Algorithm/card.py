@@ -6,6 +6,7 @@ class card():
         
 def createCards(condition):
     cards = [
+        # BASEBALL:
         # Anthony Volpe: 
             card("2023 Topps Chrome Anthony-Volpe Refractor 4 PSA 10",condition["Graded"], False),
             card("2023 Topps Chrome Anthony-Volpe X-fractor PSA 10",condition["Graded"], False),
@@ -191,15 +192,6 @@ def createCards(condition):
         # Mike Trout:
             card("2011 Topps Update Mike-Trout PSA 10", condition["Graded"], False),
             card("2011 Topps Update Mike-Trout", condition["Ungraded"], False),
-        
-        # Victor Wembanyama:
-            card("2023 Prizm Draft Victor-Wembanyama PSA 10", condition["Graded"], False),
-            card("2023 Prizm Victor-Wembanyama 136 PSA 10", condition["Graded"], False),
-        
-        # CJ Stroud:
-            card("2023 Panini Donruss C.J.-Stroud 339 PSA 10", condition["Graded"], False),
-            card("2023 Panini Prizm 339 CJ-Stroud PSA 10", condition["Graded"],False),
-            card("2023 Panini Prizm CJ-Stroud-339", condition["Ungraded"],False),
 
         # Cheap Autos
             card("2023 Bowman Draft 1st Auto PSA 10", condition["Graded"], True),
@@ -223,11 +215,65 @@ def createCards(condition):
             card("2019 Topps Baseball Auto PSA 10", condition["Graded"], True),
             card("2018 Topps Chrome Baseball Auto PSA 10", condition["Graded"], True),
             card("2018 Topps Baseball Auto PSA 10", condition["Graded"], True),
+
+        # BASKETBALL:
+        # Victor Wembanyama:
+            card("2023 Prizm Draft Victor-Wembanyama PSA 10", condition["Graded"], False),
+            card("2023 Prizm Victor-Wembanyama 136 PSA 10", condition["Graded"], False),
+        # Steph Curry:
+        # Lebron James:
+        # Tyrese Haliburton:
+        # Luka Doncic:
+        # Nikola Jokic:
+        # Anthony Edwards:
+        # Zion Williamson:
+        # Paolo Banchero:
+        # Jason Tatum:
+        # Giannis Antetokounmpo:
+        # Michael Jordan:
+        # Chet Holmgreen:
+        # Shai Gilgeous-Alexander
+        # Kyrie Irving:
+        # Trae Young:
+        # De'Aaron Fox:
+        # Damian Lillard:
+        # Jimmy Butler:
+        # Devin Booker:
+        # Joel Embid:
+        # Kevin Durant:
+        # Kobe Bryant:
+        
+        # FOOTBALL:
+        # CJ Stroud:
+            card("2023 Panini Donruss C.J.-Stroud 339 PSA 10", condition["Graded"], False),
+            card("2023 Panini Prizm 339 CJ-Stroud PSA 10", condition["Graded"],False),
+            card("2023 Panini Prizm CJ-Stroud-339", condition["Ungraded"],False),
+        # Brock Purdy:
+        # Josh Allen:
+        # Patrick Mahomes:
+        # Tom Brady:
+        # Aaron Rodgers: 
+        # Lamar Jackson:
+        # Joe Burrow:
+        # Jordan Love:
+        # Anthony Richardson:
+        # Justin Herbert:
+        # Ben Roethlisburger
+        # Jalen Hurts:
+
+        # HOCKEY: 
+        # Connor Bedard:
+        # Connor McDavid:
+        # Nathan Mackinnon:
+        # Nikita Kucherov:
+        # Leon Draisaitl:
+        # Auston Matthews: 
+        # Cale Makar:
+        # Jack Hughes:
+        # Sidney Crosby:
+        # Alexander Ovechkin:
+        # Tim Stutzle:
             
-            
-            # yamamoto, 
-            # jram, yordan, harper, lindor, tatis, verlander, scherzer, kershaw,
-            # bedard, paolo, puka, purdy, anthony edwards, haliburton 
             ]
     # print(len(cards))
 

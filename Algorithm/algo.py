@@ -37,7 +37,7 @@ def lambda_handler(event, context):
 
     for item in cards:
         prices = currPrice(token, item.name, item.cond, item.auto)
-        auctions = currAucPrices(token, item.name, item.cond,(date+timeRange).isoformat()[:23])
+        auctions = currAucPrices(token, item.name, item.cond,(date+timeRange).isoformat()[:23], item.auto)
 
         # Auction Targets 
         aucs = aucTargets(prices[0],auctions)
@@ -81,3 +81,6 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': 'Success'
     }
+
+if __name__ == "__main__":
+    print(lambda_handler("hi","ok"))
