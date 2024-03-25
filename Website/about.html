@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kryptos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="Images/logoNoText.png" style="width:100%">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="works.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <img src = "Images/gearIcon.png" style="width:100%">
+    <p>HOW IT WORKS</p>
+  </a>
+  <a href="cards.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>TRACKED CARDS</p>
+  </a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="works.html" class="w3-bar-item w3-button" style="width:25% !important">HOW IT WORKS</a>
+    <a href="cards.html" class="w3-bar-item w3-button" style="width:25% !important">TRACKED CARDS</a>
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-64" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-64 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small"></span>ABOUT</h1>
+  </header>
+
+  <!-- Roadmap -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-16" id="about">
+    <h2 class="w3-text-light-grey">Subscription Value</h2>
+    <hr style="width:300px" class="w3-opacity">
+    <h3 class="w3-padding-16 w3-text-light-grey">We Value Transparency:</h3>
+    <p> We value transparency and think it improves the customer's experience. As a result, we want to publish how we 
+        determined our subcriptions values. We strive to provide a service worth more than its price because
+        we want you to use it to make money. 
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">Determining Value:</h3>
+    <img src="Images/valueFormula.png" style="width:100%">
+    <p> We ran our service for a week and compiled all of the emails it sent out. We then used the process shown above to determine the 
+        amount of value generated for every card in our emails. The total value generated for the week was $______. Multiplying that number by
+        30/7, we estimated a monthly generated value of $______. Acknowledging that one person will not win every single auction, we divided that 
+        total monthly value by 100, estimating that each user receives 1% of the total value of the algorithm. Finally, we arrive at our monthly
+        subscription value of $______. 
+    </p>
+  </div>
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-16" id="about">
+    <h2 class="w3-text-light-grey">Roadmap</h2>
+    <hr style="width:175px" class="w3-opacity">
+    <img src="Images/Roadmap.png" style="width:100%">
+  </div>
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-16" id="about">
+    <h2 class="w3-text-light-grey">Frequently Asked Questions</h2>
+    <hr style="width:450px" class="w3-opacity">
+    <h3 class="w3-padding-16 w3-text-light-grey">Why didn't you keep the algorithm for your own use?</h3>
+    <p> Quite simply, we do not have the capital to invest in all of the underpriced cards that the service generates. 
+        As mentionned above, the service generates about $_____ per month but to capitalize on all of that value, much more needs to be invested. 
+        We do not have the money to buy all of those cards.
+    </p>
+    
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-0 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Us</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> New Jersey, US</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    </div><br>
+
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-16 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>

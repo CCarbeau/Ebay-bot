@@ -229,4 +229,10 @@ def createCards(condition):
             # jram, yordan, harper, lindor, tatis, verlander, scherzer, kershaw,
             # bedard, paolo, puka, purdy, anthony edwards, haliburton 
             ]
+    # print(len(cards))
+
     return cards
+
+# if __name__ =="__main__":
+#     condition = {"Graded":"2750", "Ungraded":"4000"}
+#     createCards(condition)

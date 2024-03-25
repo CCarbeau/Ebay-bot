@@ -7,9 +7,9 @@ Features:
 
 Notes: 
     - Allowed 5000 calls per day, make 2 calls per cycle, can search/compare 104 items per hour 
-    - If algorithm only runs during waking hours (say 8 am - 1 am) can search/compare 147 items per hour
     - Algorithm path: /Users/christian/Desktop/Personal/Projects/Ebay-bot/algo.py
     - Company name: Kryptos 
+    - With 9 calls a day (every 2 hours 8 am - 12 am), can have 277 search terms
 
 TODO: 
     - Add bedard and mcdavid cards
