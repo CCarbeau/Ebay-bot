@@ -298,14 +298,24 @@ def createCards(condition):
             card("2012-13 Panini Prizm Damian Lillard Silver 245 PSA 9", condition["Graded"], False),
 
         # Jimmy Butler:
+            card("2012-13 Prizm Jimmy Butler 205 PSA 10", condition["Graded"], False),
 
         # Devin Booker:
+            card("2015-16 Panini Prizm Devin Booker 308 PSA 10", condition["Graded"],False),
+            card("2015-16 Panini Prizm Devin Booker Silver 308 PSA 10", condition["Graded"],False),
 
         # Joel Embid:
+            card("2014-15 Panini Prizm Joel Embiid 253 PSA 10", condition["Graded"],False),
+            card("2014-15 Panini Prizm Joel Embiid 253 PSA 9", condition["Graded"],False),
+            card("2014-15 Panini Prizm Joel Embiid Silver 253 PSA 10", condition["Graded"],False),
+            card("2014-15 Panini Prizm Joel Embiid Silver 253 PSA 9", condition["Graded"],False),
 
         # Kevin Durant:
+            card("2007 Topps Kevin Durant 2 PSA 10", condition["Graded"], False),
 
         # Kobe Bryant:
+            card("1996 Topps Kobe Bryant 138 PSA 10", condition["Graded"], False),
+            card("1996 Topps Kobe Bryant 138 PSA 9", condition["Graded"], False),
         
         # FOOTBALL:
         # # CJ Stroud:
@@ -313,24 +323,46 @@ def createCards(condition):
         #     card("2023 Panini Prizm 339 CJ-Stroud PSA 10", condition["Graded"],False),
         #     card("2023 Panini Prizm CJ-Stroud-339", condition["Ungraded"],False),
         # Brock Purdy:
+            card("2022 Prizm Brock Purdy 353 PSA 10", condition["Graded"], False),
+            card("2022 Chronicles PB8 Brock Purdy Prizm Black Silver PSA 10", condition["Graded"], False),
 
         # Josh Allen:
+            card("2018 Panini Donruss Josh Allen Rated Rookie 304 PSA 10", condition["Graded"], False),
+            card("2018 Panini Prizm Josh Allen 205 PSA 10", condition["Graded"], False),
 
         # Patrick Mahomes:
+            card("2017 Donruss Optic Patrick Mahomes Rated Rookie PSA 10 177", condition["Graded"], False),
+            card("2017 Donruss Optic Patrick Mahomes Rated Rookie PSA 9 177", condition["Graded"], False),
+            card("2017 Panini Prizm Patrick Mahomes Silver 269 PSA 10", condition["Graded"], False),
+            card("2017 Panini Prizm Patrick Mahomes Silver 269 PSA 9", condition["Graded"], False),
 
         # Tom Brady:
+            card("2000 Bowman 236 Tom Brady PSA 9", condition["Graded"], False),
+            card("2000 Bowman 236 Tom Brady PSA 8", condition["Graded"], False),
+            card("2000 Bowman 236 Tom Brady PSA 7", condition["Graded"], False),
 
         # Aaron Rodgers: 
+            card("2005 Topps Aaron Rodgers 431 PSA 10", condition["Graded"], False),
+            card("2005 Topps Aaron Rodgers 431 PSA 9", condition["Graded"], False),
 
         # Lamar Jackson:
+            card("2018 Panini Donruss Optic Lamar Jackson Rated Rookie 167 PSA 10", condition["Graded"], False),
+            card("2018 Panini Prizm 212 Lamar Jackson PSA 10", condition["Graded"], False),
 
         # Joe Burrow:
+            card("2020 Panini Prizm 307 Joe Burrow PSA 10", condition["Graded"], False),
+            card("2020 Panini Donruss Optic Joe Burrow Rated Rookie 151 PSA 10", condition["Graded"], False),
 
         # Jordan Love:
+            card("2020 Panini Donruss Jordan Love 304 Rated Rookie PSA 10", condition["Graded"], False),
+            card("2020 Panini Prizm Jordan Love 363 PSA 10", condition["Graded"], False),
 
         # Anthony Richardson:
-
+            card("2023 Panini Prizm Anthony Richardson 343 PSA 10", condition["Graded"], False),
+            
         # Justin Herbert:
+            card("2020 Panini Prizm Justin Herbert 325 Chargers PSA 10", condition["Graded"], False),
+            card("2020 Panini Donruss Justin Herbert Rated Rookie 303 PSA 10", condition["Graded"], False),
 
         # Ben Roethlisburger:
 
@@ -360,11 +392,10 @@ def createCards(condition):
         # Tim Stutzle:
             
             ]
-    # print(len(cards))
 
     return cards
 
-# if __name__ =="__main__":
-#     condition = {"Graded":"2750", "Ungraded":"4000"}
-#     print(len(createCards(condition)))
+if __name__ =="__main__":
+    condition = {"Graded":"2750", "Ungraded":"4000"}
+    print(len(createCards(condition)))
     
