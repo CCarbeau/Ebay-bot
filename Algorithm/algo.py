@@ -37,47 +37,46 @@ def lambda_handler(event, context):
 
     for item in cards:
         prices = currPrice(token, item.name, item.cond, item.auto)
-        print(prices[0])
 
-    #     auctions = currAucPrices(token, item.name, item.cond,(date+timeRange).isoformat()[:23], item.auto)
+        auctions = currAucPrices(token, item.name, item.cond,(date+timeRange).isoformat()[:23], item.auto)
 
-    #     # Auction Targets 
-    #     aucs = aucTargets(prices[0],auctions)
+        # Auction Targets 
+        aucs = aucTargets(prices[0],auctions)
         
-    #     if(len(aucTargDf)==0 and len(aucs)!=0):
-    #         aucTargDf = aucs
-    #     elif(len(aucs!=0)):
-    #         aucTargDf = pd.concat([aucTargDf,aucs])
-    #         aucTargDf = aucTargDf.reset_index(drop=True)
+        if(len(aucTargDf)==0 and len(aucs)!=0):
+            aucTargDf = aucs
+        elif(len(aucs!=0)):
+            aucTargDf = pd.concat([aucTargDf,aucs])
+            aucTargDf = aucTargDf.reset_index(drop=True)
 
-    #     # Buy Now Targets:
-    #     buyNow = buyNowTargets(prices[2])
+        # Buy Now Targets:
+        buyNow = buyNowTargets(prices[2])
         
-    #     if(len(buyNow)!=0 and len(buyTargDf)==0):
-    #         buyTargDf = buyNow
-    #     elif(len(buyNow)!=0):
-    #         buyTargDf = pd.concat([buyTargDf,buyNow])
-    #         buyTargDf = buyTargDf.reset_index(drop=True)
+        if(len(buyNow)!=0 and len(buyTargDf)==0):
+            buyTargDf = buyNow
+        elif(len(buyNow)!=0):
+            buyTargDf = pd.concat([buyTargDf,buyNow])
+            buyTargDf = buyTargDf.reset_index(drop=True)
 
-    #     # Best Offer Targets;
-    #     offers = offerTargets(prices[0],prices[1])
+        # Best Offer Targets;
+        offers = offerTargets(prices[0],prices[1])
         
-    #     if (len(offers)!=0 and len(offerTargDf)==0):
-    #         offerTargDf = offers
-    #     elif(len(offers)!=0):
-    #         offerTargDf = pd.concat([offerTargDf,offers])
-    #         offerTargDf = offerTargDf.reset_index(drop = True)
+        if (len(offers)!=0 and len(offerTargDf)==0):
+            offerTargDf = offers
+        elif(len(offers)!=0):
+            offerTargDf = pd.concat([offerTargDf,offers])
+            offerTargDf = offerTargDf.reset_index(drop = True)
 
-    # aucTargDf = aucTargDf.sort_values(by="Discount", ascending=False)
-    # aucTargDf = aucTargDf.reset_index(drop=True)
+    aucTargDf = aucTargDf.sort_values(by="Discount", ascending=False)
+    aucTargDf = aucTargDf.reset_index(drop=True)
 
-    # buyTargDf = buyTargDf.sort_values(by="Discount", ascending=False)
-    # buyTargDf = buyTargDf.reset_index(drop=True)
+    buyTargDf = buyTargDf.sort_values(by="Discount", ascending=False)
+    buyTargDf = buyTargDf.reset_index(drop=True)
 
-    # offerTargDf = offerTargDf.sort_values(by="Discount", ascending=False)
-    # offerTargDf = offerTargDf.reset_index(drop = True)
+    offerTargDf = offerTargDf.sort_values(by="Discount", ascending=False)
+    offerTargDf = offerTargDf.reset_index(drop = True)
     
-    # email(emailAddresses,aucTargDf, buyTargDf, offerTargDf)
+    email(emailAddresses,aucTargDf, buyTargDf, offerTargDf)
     
     return {
         'statusCode': 200,
