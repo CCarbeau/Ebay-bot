@@ -39,9 +39,24 @@ def createCards(condition):
         
         # # Julio Rodriguez: 
         #     card("2022 Topps Chrome Update Julio-Rodriguez USC150 PSA 10",condition["Graded"], False),
+            # card("2019 Bowman Chrome 1st Julio Rodriguez BCP33 PSA 10", condition["Graded"], False),
+            # card("2022 Topps Update Julio Rodriguez Gold Foil PSA 10 US44", condition["Graded"], False),
+            # card("2022 Topps Update Julio Rodriguez Gold Foil PSA 9 US44", condition["Graded"], False),
+            # card("2022 Topps Update Julio Rodriguez Gold-/2022 PSA 10 US44", condition["Graded"], False),
+            # card("2022 Topps Update Julio Rodriguez Gold-/2022 PSA 9 US44", condition["Graded"], False),
+            # card("2022 Topps Chrome Update Julio Rodriguez USC150 Purple Refractor PSA 10", condition["Graded"], False),
+
             
         # # Bobby Witt Jr:    
         #     card("2022 Topps Update Bobby-Witt-Jr USC35 PSA 10",condition["Graded"], False),
+            # card("Bobby Witt Jr 2020 Bowman Chrome BCP25 1st PSA 10", condition["Graded"], False),
+            # card("2020 Bowman Bobby Witt Jr 1st Bowman Chrome Mega Box Refractor PSA 10", condition["Graded"], False),
+            # card("2022 Topps Update Bobby Witt Jr Gold Foil PSA 10 US100", condition["Graded"], False),
+            # card("2022 Topps Update Bobby Witt Jr Gold Foil PSA 9 US100", condition["Graded"], False),
+            # card("2022 Topps Update Bobby Witt Jr Gold-/2022 PSA 10 US100", condition["Graded"], False),
+            # card("2022 Topps Update Bobby Witt Jr Gold-/2022 PSA 9 US100", condition["Graded"], False),
+            # card("2022 Topps Chrome Update Bobby Witt Jr USC35 Purple Refractor PSA 10", condition["Graded"], False),
+
         
         # # Max Clark:
         #     card("2023 Bowman Draft Max-Clark 1st auto PSA 10",condition["Graded"], True),
@@ -92,6 +107,9 @@ def createCards(condition):
         
         # # Jasson Dominguez: 
         #     card("2020 Bowman Chrome Jasson-Dominguez 1st CPA-JDO PSA 10",condition["Graded"], True),
+            # # card("2024 Topps Series 1 Jasson Dominguez Rainbow Foil 60", condition["Ungraded"], False),
+            # card("2024 Topps Series 1 Jasson Dominguez Gold Foil 60", condition["Ungraded"], False),
+
         
         # # Matt Shaw: 
         #     card("2023 Bowman Draft Matt-Shaw 1st auto PSA 10",condition["Graded"], True),
@@ -121,6 +139,8 @@ def createCards(condition):
         # # Evan Carter: 
         #     card("2020 Bowman Draft Evan-Carter 1st auto PSA 10",condition["Graded"], True),
         #     card("2020 Bowman Draft Evan-Carter 1st auto",condition["Ungraded"], True),
+            # card("2024 Topps Series 1 Evan Carter Rainbow Foil 280", condition["Ungraded"], False),
+            # card("2024 Topps Series 1 Evan Carter Gold Foil 280", condition["Ungraded"], False),
         
         # # Ethan Salas:
         #     card("2023 Bowman Chrome Ethan-Salas 1st auto PSA 10",condition["Graded"], True),
@@ -153,13 +173,23 @@ def createCards(condition):
         
         # # O'neil Cruz:
         #     card("2022 Topps Chrome Oneil-Cruz Pink Refractor 128 PSA 10", condition["Graded"], False),
-        
+            # card("2022 Topps Series 2 Oneil Cruz Gold-/2022 537 PSA 10", condition["Graded"], False),
+            # card("2022 Topps Series 2 Oneil Cruz Gold-/2022 537 PSA 9", condition["Graded"], False),
+            # card("2022 Topps Series 2 Oneil Cruz Gold-Foil 537 PSA 10", condition["Graded"], False),
+            # card("2022 Topps Series 2 Oneil Cruz Gold-Foil 537 PSA 9", condition["Graded"], False),
+            # card("2022 Topps Series 2 Oneil Cruz Rainbow Foil 537 PSA 10", condition["Graded"], False),
+            # card("2022 Topps Chrome Oneil Cruz X-Fractor 128 PSA 10", condition["Graded"], False),
+            
         # # Corbin Carroll:
         #     card("2023 Topps Chrome Refractor Corbin-Carroll 95 PSA 10", condition["Graded"],False),
         #     card("2023 Topps Chrome Corbin-Carroll Auto RACCA PSA 10", condition["Graded"],True),
         #     card("2023 Topps Chrome Corbin-Carroll Auto RACCA", condition["Ungraded"],True),
         #     card("2019 Bowman Draft Chrome Corbin-Carroll 1st PSA 10", condition["Graded"],False),
         #     card("2019 Bowman Draft Chrome Corbin-Carroll 1st PSA 10 auto", condition["Graded"],True),
+            # card("2023 Topps Chrome Corbin-Carroll X-fractor 95 PSA 10",condition["Graded"], False),
+            # card("2023 Topps Chrome Corbin Carroll Prism Refractor 95 PSA 10",condition["Graded"], False),
+            # card("2023 Topps Chrome Sapphire Corbin-Carroll PSA 10 401",condition["Graded"], False),
+           
         
         # # Paul Skenes:
         #     card("2023 Bowman Draft Chrome Paul Skenes 1st BDC PSA 10", condition["Graded"],False),
@@ -168,6 +198,7 @@ def createCards(condition):
         
         # # Aaron Judge:
         #     card("2017 Topps Chrome Aaron-Judge 169 PSA 10", condition["Graded"],False),
+            # card("2013 Bowman Aaron Judge 1st BDPP19 PSA 10", condition["Graded"], False),
         
         # # Ronald Acuna Jr:
         #     card("2017 Bowman Ronald-Acuna-Jr Chrome 1st 127 PSA 10", condition["Graded"],False),
@@ -221,101 +252,101 @@ def createCards(condition):
         #     card("2023 Prizm Draft Victor-Wembanyama PSA 10", condition["Graded"], False),
         #     card("2023 Prizm Victor-Wembanyama 136 PSA 10", condition["Graded"], False),
 
-        # Steph Curry:
-            card("2009 Topps Stephen Curry #321 PSA 9", condition["Graded"],False),
-            card("2009 Topps Stephen Curry #321 PSA 8", condition["Graded"],False),
-            card("2009 Topps Stephen Curry #321 PSA 7", condition["Graded"],False),
+        # # Steph Curry:
+            # card("2009 Topps Stephen Curry 321 PSA 9", condition["Graded"],False),
+            # card("2009 Topps Stephen Curry 321 PSA 8", condition["Graded"],False),
+            # card("2009 Topps Stephen Curry 321 PSA 7", condition["Graded"],False),
         # Lebron James:
-            card("2003-04 Topps 2003 NBA Draft #221 LeBron James PSA 9", condition["Graded"],False),
-            card("2003-04 Topps 2003 NBA Draft #221 LeBron James PSA 8", condition["Graded"],False),
-            card("2003-04 Topps chrome 111 2003 LeBron James PSA 9", condition["Graded"],False),
-            card("2003-04 Topps chrome 111 2003 LeBron James PSA 8", condition["Graded"],False),
-            card("2003-04 Topps chrome 111 2003 LeBron James PSA 7", condition["Graded"],False),
+            # card("2003 Topps 2003 NBA Draft 221 LeBron James PSA-9", condition["Graded"],False),
+            # card("2003 Topps 2003 NBA Draft 221 LeBron James PSA 8", condition["Graded"],False),
+            # card("2003 Topps chrome 111 2003 LeBron James PSA 9", condition["Graded"],False),
+            # card("2003 Topps chrome 111 2003 LeBron James PSA 8", condition["Graded"],False),
+            # card("2003 Topps chrome 111 2003 LeBron James PSA 7", condition["Graded"],False),
 
         # Luka Doncic:
-            card("2018 Panini Prizm Luka-Doncic Rookie RC #280 PSA 10", condition["Graded"], False),
-            card("2018-19 Donruss Rated Rookie Luka Doncic PSA 10 ROOKIE CARD RC #177", condition["Graded"], False),
-            card("2018 Panini Select Luka Doncic Concourse RC PSA 10 #25", condition["Graded"], False),
-            card("2018-19 Panini Select Premier level #122 Luka Doncic PSA 10", condition["Graded"], False),
+            # card("2018 Panini Prizm Luka-Doncic Rookie RC 280 PSA 10", condition["Graded"], False),
+            # card("2018 Donruss Rated Rookie Luka Doncic PSA-10 177", condition["Graded"], False),
+            # card("2018 Panini Select Luka Doncic Concourse PSA 10 25", condition["Graded"], False),
+            # card("2018 Panini Select Premier level 122 Luka Doncic PSA 10", condition["Graded"], False),
         
         # Nikola Jokic:
-            card("2015-16 Panini Prizm Nikola Jokic #335 PSA 10", condition["Graded"], False),
-            card("2015-16 Panini Prizm Nikola Jokic #335 PSA 9", condition["Graded"], False),
-            card("2015-16 Panini Select #128 Nikola Jokic PSA 10", condition["Graded"], False),
-            card("2015-16 Panini Select Premier #128 Nikola Jokic PSA 9", condition["Graded"], False),
+            # card("2015 Panini Prizm Nikola Jokic 335 PSA 10", condition["Graded"], False),
+            # card("2015 Panini Prizm Nikola Jokic 335 PSA 9", condition["Graded"], False),
+            # card("2015 Panini Select 128 Nikola Jokic PSA 10", condition["Graded"], False),
+            # card("2015 Panini Select Premier 128 Nikola Jokic PSA 9", condition["Graded"], False),
 
         # Anthony Edwards:
-            card("2020-2021 Panini Prizm Anthony Edwards 258 PSA 10", condition["Graded"], False),
-            card("2020-2021 Panini Prizm Anthony Edwards 258 Silver PSA 10", condition["Graded"], False),
-            card("2020-2021 Panini Prizm Anthony Edwards 258 Silver PSA 9", condition["Graded"], False),
+            # card("2020 Panini Prizm Anthony Edwards 258 PSA 10", condition["Graded"], False),
+            # card("2020 Panini Prizm Anthony Edwards 258 Silver-Prizm PSA 10", condition["Graded"], False),
+            # card("2020 Panini Prizm Anthony Edwards 258 Silver PSA 9", condition["Graded"], False),
 
         # Zion Williamson:
-            card("2019 Panini Prizm Zion Williamson 248 PSA 10", condition["Graded"], False),
-            card("2019 Panini Prizm Zion Williamson Silver 248 PSA 10", condition["Graded"], False),
+            # card("2019 Panini Prizm Zion Williamson 248 PSA 10", condition["Graded"], False),
+            # card("2019 Panini Prizm Zion Williamson Silver 248 PSA 10", condition["Graded"], False),
 
         # Paolo Banchero:
-            card("2022-23 Panini Prizm Paolo Banchero #249 Prizm PSA 10", condition["Graded"], False),
-            card("2022-23 Panini Prizm Paolo Banchero #249 Silver Prizm PSA 10", condition["Graded"], False),
+            # card("2022 Panini Prizm Paolo Banchero 249 Prizm PSA 10", condition["Graded"], False),
+            # card("2022 Panini Prizm Paolo Banchero 249 Silver-Prizm PSA 10", condition["Graded"], False),
 
         # Jason Tatum:
-            card("2017-18 Panini Prizm Jayson Tatum 16 PSA 10",condition["Graded"], False),
-            card("2017-18 Panini Prizm Jayson Tatum Silver 16 PSA 10",condition["Graded"], False),
-            card("2017-18 Panini Prizm Jayson Tatum Silver 16 PSA 9",condition["Graded"], False),
+            # card("2017 Panini Prizm Jayson Tatum 16 PSA 10",condition["Graded"], False),
+            # card("2017 Panini Prizm Jayson Tatum Silver-Prizm 16 PSA 10",condition["Graded"], False),
+            # card("2017 Panini Prizm Jayson Tatum Silver 16 PSA 9",condition["Graded"], False),
             
         # Giannis Antetokounmpo:
-            card("2013-14 Panini Prizm 290 Giannis Antetokounmpo PSA 10", condition["Graded"], False),
-            card("2013-14 Panini Prizm 290 Giannis Antetokounmpo PSA 9", condition["Graded"], False),
+            # card("2013 Panini Prizm 290 Giannis Antetokounmpo PSA 10", condition["Graded"], False),
+            # card("2013 Panini Prizm 290 Giannis Antetokounmpo PSA 9", condition["Graded"], False),
 
         # Michael Jordan:
-            card("1986 Fleer #57 Michael Jordan PSA 7", condition["Graded"], False),
-            card("1986 Fleer #57 Michael Jordan PSA 6", condition["Graded"], False),
-            card("1986 Fleer #57 Michael Jordan PSA 5", condition["Graded"], False),
-            card("1986 Fleer #57 Michael Jordan PSA 4", condition["Graded"], False),
-            card("1986 Fleer #57 Michael Jordan PSA 3", condition["Graded"], False),
+            # card("1986 Fleer 57 Michael Jordan PSA 7", condition["Graded"], False),
+            # card("1986 Fleer 57 Michael Jordan PSA 6", condition["Graded"], False),
+            # card("1986 Fleer 57 Michael Jordan PSA 5", condition["Graded"], False),
+            # card("1986 Fleer 57 Michael Jordan PSA-4", condition["Graded"], False),
+            # card("1986 Fleer 57 Michael Jordan PSA 3", condition["Graded"], False),
 
         # Chet Holmgreen:
-            card("2022 Panini Prizm 266 Chet Holmgren PSA 10", condition["Graded"], False),
-            card("2022 Panini Prizm 266 Chet Holmgren Silver PSA 10", condition["Graded"], False),
-            card("2022 Panini Prizm 266 Chet Holmgren Green PSA 10", condition["Graded"], False),
+            # card("2022 Panini Prizm 266 Chet Holmgren PSA 10", condition["Graded"], False),
+            # card("2022 Panini Prizm 266 Chet Holmgren Silver-Prizm PSA 10", condition["Graded"], False),
+            # card("2022 Panini Prizm 266 Chet Holmgren Green PSA 10", condition["Graded"], False),
 
         # Shai Gilgeous-Alexander:
-            card("2018-19 Panini Prizm 184 Shai Gilgeous-Alexander PSA 10", condition["Graded"], False),
-            card("2018-19 Panini Prizm 184 Shai Gilgeous-Alexander Silver PSA 10", condition["Graded"], False),
-            card("2018-19 Panini Prizm 184 Shai Gilgeous-Alexander Green PSA 10", condition["Graded"], False),
+            # card("2018 Panini Prizm 184 Shai Gilgeous-Alexander PSA 10", condition["Graded"], False),
+            # card("2018 Panini Prizm 184 Shai Gilgeous-Alexander Silver PSA 10", condition["Graded"], False),
+            # card("2018 Panini Prizm 184 Shai Gilgeous-Alexander Green PSA 10", condition["Graded"], False),
 
         # Kyrie Irving:
-            card("2012 Panini Prizm #201 Kyrie Irving PSA 10", condition["Graded"], False),
-            card("2012 Panini Prizm #201 Kyrie Irving Silver PSA 10", condition["Graded"], False),
+            # card("2012 Panini Prizm 201 Kyrie Irving PSA 10", condition["Graded"], False),
+            # # card("2012 Panini Prizm 201 Kyrie Irving Silver PSA 10", condition["Graded"], False), (NO RESULTS)
 
         # Trae Young:
-            card("2018-19 Panini Prizm Trae Young 78 PSA 10", condition["Graded"], False),
-            card("2018-19 Panini Prizm Trae Young Silver 78 PSA 10", condition["Graded"], False),
-            card("2018-19 Panini Prizm Trae Young Green 78 PSA 10", condition["Graded"], False),
+            # card("2018 Panini Prizm Trae Young 78 PSA 10", condition["Graded"], False),
+            # card("2018 Panini Prizm Trae Young Silver 78 PSA 10", condition["Graded"], False),
+            # card("2018 Panini Prizm Trae Young Green 78 PSA 10", condition["Graded"], False),
 
         # Damian Lillard:
-            card("2012-13 Panini Prizm Damian Lillard 245 PSA 10", condition["Graded"], False),
-            card("2012-13 Panini Prizm Damian Lillard Silver 245 PSA 10", condition["Graded"], False),
-            card("2012-13 Panini Prizm Damian Lillard Silver 245 PSA 9", condition["Graded"], False),
+            # card("2012 Panini Prizm Damian Lillard 245 PSA 10", condition["Graded"], False),
+            # card("2012 Panini Prizm Damian Lillard Silver 245 PSA 10", condition["Graded"], False),
+            # card("2012 Panini Prizm Damian Lillard Silver 245 PSA 9", condition["Graded"], False),
 
         # Jimmy Butler:
-            card("2012-13 Prizm Jimmy Butler 205 PSA 10", condition["Graded"], False),
+            # card("2012 Prizm Jimmy Butler 205 PSA 10", condition["Graded"], False),
 
         # Devin Booker:
-            card("2015-16 Panini Prizm Devin Booker 308 PSA 10", condition["Graded"],False),
-            card("2015-16 Panini Prizm Devin Booker Silver 308 PSA 10", condition["Graded"],False),
+            # card("2015 Panini Prizm Devin Booker 308 PSA 10", condition["Graded"],False),
+            # card("2015 Panini Prizm Devin Booker Silver 308 PSA 10", condition["Graded"],False),
 
         # Joel Embid:
-            card("2014-15 Panini Prizm Joel Embiid 253 PSA 10", condition["Graded"],False),
-            card("2014-15 Panini Prizm Joel Embiid 253 PSA 9", condition["Graded"],False),
-            card("2014-15 Panini Prizm Joel Embiid Silver 253 PSA 10", condition["Graded"],False),
-            card("2014-15 Panini Prizm Joel Embiid Silver 253 PSA 9", condition["Graded"],False),
+            # card("2014 Panini Prizm Joel Embiid 253 PSA 10", condition["Graded"],False),
+            # card("2014 Panini Prizm Joel Embiid 253 PSA 9", condition["Graded"],False),
+            # card("2014 Panini Prizm Joel Embiid Silver 253 PSA 10", condition["Graded"],False),
+            # card("2014 Panini Prizm Joel Embiid Silver 253 PSA 9", condition["Graded"],False),
 
         # Kevin Durant:
-            card("2007 Topps Kevin Durant 2 PSA 10", condition["Graded"], False),
+            # card("2007 Topps Kevin Durant 2 PSA 10", condition["Graded"], False),
 
         # Kobe Bryant:
-            card("1996 Topps Kobe Bryant 138 PSA 10", condition["Graded"], False),
-            card("1996 Topps Kobe Bryant 138 PSA 9", condition["Graded"], False),
+            # card("1996 Topps Kobe Bryant 138 PSA-10", condition["Graded"], False),
+            # card("1996 Topps Kobe Bryant 138 PSA 9", condition["Graded"], False),
         
         # FOOTBALL:
         # # CJ Stroud:
@@ -365,32 +396,69 @@ def createCards(condition):
             card("2020 Panini Donruss Justin Herbert Rated Rookie 303 PSA 10", condition["Graded"], False),
 
         # Ben Roethlisburger:
+            card("2004 Topps Ben Roethlisberger 311 PSA 10", condition["Graded"], False),
+            card("2004 Bowman 114 Ben Roethlisberger PSA 10", condition["Graded"], False),
 
         # Jalen Hurts:
+            card("2020 Panini Prizm Jalen Hurts Eagles 343 PSA 10", condition["Graded"], False),
+            card("2020 Panini Donruss Optic 164 Jalen Hurts PSA 10", condition["Graded"], False),
+
 
         # HOCKEY: 
         # Connor Bedard:
+            card("Connor Bedard 2023 Upper Deck Young Guns PSA 10 451", condition["Graded"], False),
+            card("Connor Bedard 2023 Upper Deck Young Guns PSA 9 451", condition["Graded"], False),
+            card("Connor Bedard 2023 Upper Deck Young Guns 451", condition["Ungraded"], False),
 
         # Connor McDavid:
+            card("2015 Upper Deck Young Guns Connor McDavid 201 PSA 10", condition["Graded"],False),
+            card("2015 Upper Deck Young Guns Connor McDavid 201 PSA 9", condition["Graded"],False),
+            card("2015 Upper Deck Young Guns Connor McDavid 201 PSA 8", condition["Graded"],False),
+            card("2015 Upper Deck Connor McDavid Canvas Young Gun #C211 PSA 10", condition["Graded"],False),
+            card("2015 Upper Deck Connor McDavid Canvas Young Gun #C211 PSA 9", condition["Graded"],False),
 
         # Nathan Mackinnon:
+            card("2013 Upper Deck Young Guns 238 Nathan MacKinnon PSA 10", condition["Graded"], False),
+            card("2013 Upper Deck Young Guns 238 Nathan MacKinnon PSA 9", condition["Graded"], False),
+            card("2013 Upper Deck Young Guns 238 Nathan MacKinnon PSA 8", condition["Graded"], False),
 
         # Nikita Kucherov:
+            card("2013 Upper Deck Young Guns 483 Nikita Kucherov PSA 10", condition["Graded"], False),
+            card("2013 Upper Deck Young Guns 483 Nikita Kucherov PSA 9", condition["Graded"], False),
+            card("2013 Upper Deck Young Guns 483 Nikita Kucherov PSA 8", condition["Graded"], False),
 
         # Leon Draisaitl:
+            card("2014 Upper Deck Young Guns 223 Leon Draisaitl PSA 10", condition["Graded"], False),
+            card("2014 Upper Deck Young Guns 223 Leon Draisaitl PSA 9", condition["Graded"], False),
+            card("2014 Upper Deck Young Guns 223 Leon Draisaitl PSA 8", condition["Graded"], False),
 
         # Auston Matthews: 
+            card("2016 Upper Deck Young Guns 201 Auston Matthews PSA 10", condition["Graded"], False),
+            card("2016 Upper Deck Young Guns 201 Auston Matthews PSA 9", condition["Graded"], False),
+            card("2016 Upper Deck Canvas Young Guns Auston Matthews PSA 10", condition["Graded"], False),
+            card("2016 Upper Deck Canvas Young Guns Auston Matthews PSA 9", condition["Graded"], False),
 
         # Cale Makar:
+            card("2019 Upper Deck Young Guns 493 Cale Makar PSA 10", condition["Graded"], False),
+            card("2019 Upper Deck Young Guns 493 Cale Makar PSA 9", condition["Graded"], False),
 
         # Jack Hughes:
+            card("2019 Upper Deck Jack Hughes Young Guns 201 PSA 10", condition["Graded"], False),
+            card("2019 Upper Deck Jack Hughes Young Guns 201 PSA 9", condition["Graded"], False),
 
         # Sidney Crosby:
+            card("2005 Upper Deck Young Guns 201 Sidney Crosby PSA 10", condition["Graded"], False),
+            card("2005 Upper Deck Young Guns 201 Sidney Crosby PSA 9", condition["Graded"], False),
+            card("2005 Upper Deck Young Guns 201 Sidney Crosby PSA 8", condition["Graded"], False),
 
         # Alexander Ovechkin:
+            card("2005 Upper Deck Young Guns 443 Alexander Ovechkin PSA 10", condition["Graded"], False),
+            card("2005 Upper Deck Young Guns 443 Alexander Ovechkin PSA 9", condition["Graded"], False),
+            card("2005 Upper Deck Young Guns 443 Alexander Ovechkin PSA 8", condition["Graded"], False),
 
         # Tim Stutzle:
-            
+            card("2020 Upper Deck Tim Stutzle Young Guns 482 PSA 10", condition["Graded"], False), 
+            card("2020 Uppder Deck Tim Stutzle Young Guns 482 PSA 9", condition["Graded"], False)
             ]
 
     return cards
