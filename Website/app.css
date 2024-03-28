@@ -1,18 +1,15 @@
-h1 {
-    color: red; 
-}
-
-#ch{
+[id^="ch"] {
     display: none;
 }
 
-#ch:checked ~ .content{
+[id^="ch"]:checked ~ .content {
     display: block;
 }
 
-#ch:checked ~ label{
+[id^="ch"]:checked ~ label {
     display: none; 
 }
+
 .content {
     display: none;
 }
@@ -24,5 +21,4 @@ label {
     background-color: #fff;
     padding: 3px 13px;
     border-radius: 3px;
-
 }
