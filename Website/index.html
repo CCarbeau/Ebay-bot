@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -97,53 +98,23 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
     
     <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey">Subscription Prices</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Casual</li>
-          <li class="w3-padding-16">Pick 2 cards per month to track</li>
-          <li class="w3-padding-16">Email every 2 hours</li>
-          <li class="w3-padding-16">1000 auction targets per month</li>
-          <li class="w3-padding-16"><a href="about.html" target="_blank" class="w3-hover-text-red">$50 value</a></li>
-          <li class="w3-padding-16">
-            <h2>$10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Join</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Pick 5 cards per month to track</li>
-          <li class="w3-padding-16">ADDITIONAL Best Offer and Buy Now Targets</li>
-          <li class="w3-padding-16">1500 Targets per month</li>
-          <li class="w3-padding-16"><a href="about.html" target="_blank" class="w3-hover-text-red">$75 value</a></li>
-          <li class="w3-padding-16">
-            <h2>$25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Join</button>
-          </li>
-        </ul>
-      </div>
+    <h2 class="w3-padding-16 w3-text-light-grey">Subscription Prices</h2>
+    <hr style="width:300px" class="w3-opacity">
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+    <stripe-pricing-table pricing-table-id="prctbl_1OzjZALyOx9flSI1DXcnHPBE"
+    publishable-key="pk_live_51OvrCKLyOx9flSI1pbTmgj4tiqjKztVKOVzBrS41xis1EwXrMbQoBN6XptBEtHcSvapjFbF6tc9jVLa6IuZmFeAs00ZrjzTIX0">
+    </stripe-pricing-table>
     <!-- End Grid/Pricing tables -->
-    </div>
-    
+ 
     <!-- Testimonials -->
-    <h3 class="w3-padding-24 w3-text-light-grey">What Our Customers Think</h3>  
+    <!-- <h3 class="w3-padding-24 w3-text-light-grey">What Our Customers Think</h3>  
     <img src="Images/3856.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
     <p><span class="w3-large w3-margin-right">WOW Sportscards</span> Best LCS in New Jersey</p>
     <p>This product is fantastic! Saved our store from bankrupcy</p><br>
     
     <img src="Images/NFT.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
     <p><span class="w3-large w3-margin-right">Bleecker Trading.</span> Best card store in NYC</p>
-    <p>Great service, couldn't recommend more!</p>
+    <p>Great service, couldn't recommend more!</p> -->
   <!-- End About Section -->
   </div>
 
@@ -154,7 +125,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> New Jersey, US</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: support@kryptoscards.com</p>
     </div><br>
 
   <!-- End Contact Section -->
