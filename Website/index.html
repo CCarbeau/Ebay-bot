@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<link rel="stylesheet" href="app.css">
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -41,20 +42,34 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
+
+  <!-- Sign up/log in buttons-->
+  <div class="accounts" id="buttons">
+    <a href="https://billing.stripe.com/p/login/6oE02Nfsjdxq4BqbII">
+      <button class="log-in-button">Log In</button>
+    </a>
+    <a href="#Subscription">
+      <button class="start-trial-button">Start Trial</button>
+    </a>
+  </div>
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="works.html" class="w3-bar-item w3-button" style="width:25% !important">HOW IT WORKS</a>
-    <a href="cards.html" class="w3-bar-item w3-button" style="width:25% !important">TRACKED CARDS</a>
-    <a href="about.html" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#" class="w3-bar-item w3-button" style="width:16.6% !important">HOME</a>
+    <a href="works.html" class="w3-bar-item w3-button" style="width:16.6% !important">HOW IT WORKS</a>
+    <a href="cards.html" class="w3-bar-item w3-button" style="width:16.6% !important">TRACKED CARDS</a>
+    <a href="about.html" class="w3-bar-item w3-button" style="width:16.6% !important">ABOUT</a>
+    <a href="https://billing.stripe.com/p/login/6oE02Nfsjdxq4BqbII" class = "w3-bar-item w3-button" style="width:16.6% !important">LOG IN</a>
+    <a href="#Subscription" class = "w3-bar-item w3-button" style="width:16.6% !important">START TRIAL</a>
   </div>
+  
 </div>
 
 <!-- Page Content -->
 <div class="w3-padding-64" id="main">
+
   <!-- Header/Home -->
   <header class="w3-container w3-padding-64 w3-center w3-black" id="home">
     <!-- <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Kryptos</h1>
@@ -98,7 +113,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
     
     <!-- Grid for pricing tables -->
-    <h2 class="w3-padding-16 w3-text-light-grey">Subscription Prices</h2>
+    <h2 class="w3-padding-16 w3-text-light-grey" id="Subscription">Subscription Prices</h2>
     <hr style="width:300px" class="w3-opacity">
     <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
     <stripe-pricing-table pricing-table-id="prctbl_1OzjZALyOx9flSI1DXcnHPBE"
