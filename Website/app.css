@@ -33,7 +33,6 @@ label {
     cursor: pointer; /* Cursor style */
     transition: background-color 0.3s, color 0.3s;
 
-
     position: fixed;
     top: 10px; /* Adjust top position as needed */
     right: 150px; /* Adjust right position as needed */
