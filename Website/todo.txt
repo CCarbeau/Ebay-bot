@@ -1,5 +1,4 @@
 TODO:
     - Link the emails received from stripe to a database that then links to the algorithm/backend
-    - Create a button to go to stripe account page 
-    - Create a button in top right that links to starting a subscription 
     - Add missing card photos
+    - Rework website design using smart brevity 

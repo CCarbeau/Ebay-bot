@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="app.css?version=4">
+<script src="app.js"></script>
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -56,15 +57,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:16.6% !important">HOME</a>
-    <a href="works.html" class="w3-bar-item w3-button" style="width:16.6% !important">HOW IT WORKS</a>
-    <a href="cards.html" class="w3-bar-item w3-button" style="width:16.6% !important">TRACKED CARDS</a>
-    <a href="about.html" class="w3-bar-item w3-button" style="width:16.6% !important">ABOUT</a>
-    <a href="https://billing.stripe.com/p/login/6oE02Nfsjdxq4BqbII" class = "w3-bar-item w3-button" style="width:16.6% !important">LOG IN</a>
-    <a href="#Subscription" class = "w3-bar-item w3-button" style="width:16.6% !important">START TRIAL</a>
+  <div class="accounts" id="buttons">
+    <a href="#Subscription">
+      <button class="start-trial-button">Start Trial</button>
+    </a>
   </div>
-  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="toggleDropdown()"><i class="fa fa-bars"></i></button>
+    <div class="dropdown-content" id = "myDropdown">
+      <a href="#">Home</a>
+      <a href="works.html">How it works</a>
+      <a href="cards.html">Tracked Cards</a>
+      <a href="about.html">About</a>
+      <a href="https://billing.stripe.com/p/login/6oE02Nfsjdxq4BqbII">Log in</a>
+    </div>
+  </div>
 </div>
 
 <!-- Page Content -->
