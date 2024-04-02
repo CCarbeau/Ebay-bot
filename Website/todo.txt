@@ -2,3 +2,4 @@ TODO:
     - Link the emails received from stripe to a database that then links to the algorithm/backend
     - Add missing card photos
     - Rework website design using smart brevity 
+    - make a landing page for after buying subscription
