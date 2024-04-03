@@ -159,33 +159,27 @@ label {
     color: white;
   }
 
-.image-container {
-      position: relative;
-      width: 100%;
-      height: 900px; /* Adjust height as needed */
-      overflow: hidden;
-  }
-    
-  /* Individual images */
-  .image-container img{
-      position: absolute;
-      top: 0;
-      right: 10px;
-      opacity: 0; /* Start with images hidden */
-      transition: opacity 0.5s ease-in-out; /* Smooth transition */
-  }
-
-  .image-container p {
+  .image-container {
     position: relative;
+    width: 100%; /* Adjust width as needed */
+    height: 600px; /* Maximum height for large screens */
+    overflow: hidden;
+}
+
+/* Individual images */
+.image-container img {
+    position: absolute;
+    width: 100%; /* Images will fill the container horizontally */
+    height: auto; /* Maintain aspect ratio */
     top: 0;
     left: 0;
-    width: 50%; /* Adjust the width as needed */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
-    padding: 0px; /* Add padding as needed */
-  }
-
-.animate {
-  opacity: 0;
-  transition: opacity 0.5s ease;
+    opacity: 0; /* Start with images hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
 }
-  
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .image-container {
+        height: 300px; /* Adjust maximum height for smaller screens */
+    }
+}
