@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 <link rel="stylesheet" href="app.css?version=4">
 <script src="app.js"></script>
 <style>
@@ -135,41 +136,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
     
     <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey">Subscription Prices</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Casual</li>
-          <li class="w3-padding-16">Pick 2 cards per month to track</li>
-          <li class="w3-padding-16">Email every 2 hours</li>
-          <li class="w3-padding-16">1000 auction targets per month</li>
-          <li class="w3-padding-16">$50 value</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Join</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Pick 5 cards per month to track</li>
-          <li class="w3-padding-16">ADDITIONAL Best Offer and Buy Now Targets</li>
-          <li class="w3-padding-16">1500 Targets per month</li>
-          <li class="w3-padding-16">$75 value</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Join</button>
-          </li>
-        </ul>
-      </div>
+    <h2 class="w3-padding-16 w3-text-light-grey" id="Subscription">Subscription Prices</h2>
+    <hr style="width:300px" class="w3-opacity">
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+    <stripe-pricing-table pricing-table-id="prctbl_1OzjZALyOx9flSI1DXcnHPBE"
+    publishable-key="pk_live_51OvrCKLyOx9flSI1pbTmgj4tiqjKztVKOVzBrS41xis1EwXrMbQoBN6XptBEtHcSvapjFbF6tc9jVLa6IuZmFeAs00ZrjzTIX0">
+    </stripe-pricing-table>
     <!-- End Grid/Pricing tables -->
     </div>
   <!-- End About Section -->
