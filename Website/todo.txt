@@ -1,4 +1,20 @@
 TODO:
     - Link the emails received from stripe to a database that then links to the algorithm/backend
     - Add missing card photos
-    - Rework website design using smart brevity 
+
+Cards to be replaced:
+    - Oneil cruz gold/2022 psa 9
+    - 1986 Fleer 57 Michael Jordan PSA 3
+    - 2012 Panini Prizm 201 Kyrie Irving Silver PSA 10
+    - Embiid Silver Prizm PSA 10 & 9
+    - Connor-Bedard 2023 Upper Deck Young-Guns 451
+    - 2015 Upper Deck Connor McDavid Canvas Young Gun C211 PSA 9
+    - 2013 Upper Deck Young Guns 238 Nathan MacKinnon PSA 8
+    - 2013 Upper Deck Young Guns 483 Nikita Kucherov PSA 8
+    - 2014 Upper Deck Young Guns 223 Leon Draisaitl PSA 8
+    - 2005 Upper Deck Young Guns 201 Sidney Crosby PSA 8
+
+Cards to add: 
+    - Judge bowman chrome 1 
+    - Jordan in BGS??
+

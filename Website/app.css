@@ -15,13 +15,24 @@
 }
 
 label {
-    display: inline-block;
-    cursor: pointer;
-    color: black;
-    background-color: #fff;
-    padding: 3px 13px;
-    border-radius: 3px;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  border: 1px solid #000000; /* Black border */
+  padding: 10px 20px; /* Padding */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s, color 0.3s;
+
+  position: relative;
 }
+
+label:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 
 .log-in-button {
     background-color: #ffffff; /* White background */
@@ -159,11 +170,11 @@ label {
     color: white;
   }
 
-  .image-container {
-    position: relative;
-    width: 100%; /* Adjust width as needed */
-    height: 600px; /* Maximum height for large screens */
-    overflow: hidden;
+.image-container {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  height: 600px; /* Maximum height for large screens */
+  overflow: hidden;
 }
 
 /* Individual images */
@@ -177,11 +188,12 @@ label {
     transition: opacity 0.5s ease-in-out; /* Smooth transition */
 }
 
-/* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-    .image-container {
-        height: 300px; /* Adjust maximum height for smaller screens */
-    }
+.small-screen-image-container {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  height: 1000px; /* Maximum height for large screens */
+  overflow: hidden;
+  display: none;
 }
 
 .stats {
@@ -214,7 +226,28 @@ label {
   transform: translateX(0);
 }
 
+
+/* Adjustments for smaller screens */
 @media screen and (max-width: 600px) {
+  .image-container {
+    display: none;
+  }
+
+  .small-screen-image-container {
+    display: block;
+  }
+
+
+  .small-screen-image-container img {
+    position: absolute;
+    width: 100%; /* Images will fill the container horizontally */
+    height: auto; /* Maintain aspect ratio */
+    top: 0;
+    left: 0;
+    opacity: 1; /* Start with images hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  }
+
   .stats {
     justify-content: center;
     align-items: center;

@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-<link rel="stylesheet" href="app.css?version=8">
-<script defer src="app.js?version=5"></script>
+<link rel="stylesheet" href="app.css?version=10">
+<script defer src="app.js?version=7"></script>
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -88,6 +88,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">Our Service</h2>
     <hr style="width:200px" class="w3-opacity">
+
+    <!-- LARGE SCREENS -->
     <div class="image-container">
       <img src="Images/frontPageAnimation-1.png" alt="Image 1">
       <img src="Images/frontPageAnimation-2.png" alt="Image 2">
@@ -97,25 +99,37 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <img src="Images/frontPageAnimation-4.png" alt="Image 4">
       </a>
     </div>
-  </div>
 
-  <div class="w3-content w3-justify w3-text-grey w3-padding-0" id="stats-section">
-    <div class="stats">
-      <div class="slide">
-        <img src="Images/Email Stats-1.png" alt="Photo 1">
-      </div>
-      <div class="slide">
-        <img src="Images/Email Stats-2.png" alt="Photo 2">
-      </div>
-      <div class="slide">
-        <img src="Images/Email Stats-3.png" alt="Photo 3">
-      </div>
-      <div class="slide">
-        <img src="Images/Email Stats-4.png" alt="Photo 4">
+    <!-- SMALL SCREENS -->
+    <div class="small-screen-image-container">
+      <img src="Images/smallScreenFrontPage1.png" alt="Image 1">
+      <img src="Images/smallScreenFrontPage2.png" alt="Image 2">
+      <img src="Images/smallScreenFrontPage3.png" alt="Image 3">
+      
+      <a href="works.html">
+        <img src="Images/smallScreenFrontPage4.png" alt="Image 4">
+      </a>
+    </div>
+    
+    <!-- EMAIL STATS -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-0" id="stats-section">
+      <div class="stats">
+        <div class="slide">
+          <img src="Images/Email Stats-1.png" alt="Photo 1">
+        </div>
+        <div class="slide">
+          <img src="Images/Email Stats-2.png" alt="Photo 2">
+        </div>
+        <div class="slide">
+          <img src="Images/Email Stats-3.png" alt="Photo 3">
+        </div>
+        <div class="slide">
+          <img src="Images/Email Stats-4.png" alt="Photo 4">
+        </div>
       </div>
     </div>
   </div>
-  
+
   <!-- Grid for pricing tables -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="pricing">
     <h2 class="w3-padding-16 w3-text-light-grey" id="Subscription">Subscription Prices</h2>

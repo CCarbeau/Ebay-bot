@@ -51,3 +51,25 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+window.addEventListener('scroll', function() {
+  // Calculate the scroll position
+  let scrollPosition = window.scrollY;
+  
+  // Get the image container
+  let container = document.querySelector('.small-screen-image-container');
+  
+  // Get all the images within the container
+  let images = container.querySelectorAll('img');
+  
+  // Loop through each image
+  images.forEach(function(image, index) {
+    // Calculate the animation speed based on the screen width
+
+    // Calculate the opacity based on the scroll position and image index
+    let opacity = Math.max(0, Math.min(1, (scrollPosition - (index * 250)) / 250));
+    
+    // Apply the opacity to the image
+    image.style.opacity = opacity;
+  });
+});
