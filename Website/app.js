@@ -29,3 +29,25 @@ window.addEventListener('scroll', function() {
     image.style.opacity = opacity;
   });
 });
+
+const slides = document.querySelectorAll('.slide');
+
+window.addEventListener('scroll', () => {
+  slides.forEach((slide, index) => {
+    const slideInAt = (window.scrollY + window.innerHeight) - slide.clientHeight / 2;
+    const slideBottom = slide.offsetTop + slide.clientHeight;
+    const isHalfShown = slideInAt > slide.offsetTop;
+    const isNotScrolledPast = window.scrollY < slideBottom;
+
+    // Add delay for top right and bottom right slides
+    const delay = index === 1 || index === 3 ? 0.5 : 0; // Adjust delay as needed
+
+    if (isHalfShown && isNotScrolledPast) {
+      setTimeout(() => {
+        slide.classList.add('active');
+      }, delay * 1000); // Convert delay to milliseconds
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+});

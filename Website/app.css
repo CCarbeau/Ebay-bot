@@ -183,3 +183,48 @@ label {
         height: 300px; /* Adjust maximum height for smaller screens */
     }
 }
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: visible;
+}
+
+.slide {
+  width: 45%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s, transform 0.5s;
+  margin-right: 20px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  object-fit: cover;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  .stats {
+    justify-content: center;
+    align-items: center;
+    height: 300vh;
+    overflow: visible;
+  }
+
+  .slide {
+    width: 70%; /* Adjust width to fit container */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+}

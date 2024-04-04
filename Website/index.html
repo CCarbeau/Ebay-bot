@@ -4,12 +4,14 @@
 <title>Kryptos</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="Images/logoIcon.png" type="image/x-icon">
+<link rel="shortcut icon" href="Images/logoIcon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-<link rel="stylesheet" href="app.css?version=6">
-<script src="app.js?version=4"></script>
+<link rel="stylesheet" href="app.css?version=8">
+<script defer src="app.js?version=5"></script>
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -97,32 +99,32 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
   </div>
 
-  <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">1000</span><br>
-      Deals Found 
-    </div>
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">$20000</span><br>
-      Value Provided
-    </div>
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">89+</span><br>
-      Happy Clients
-    </div>
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">200</span><br>
-      Cards Tracked
+  <div class="w3-content w3-justify w3-text-grey w3-padding-0" id="stats-section">
+    <div class="stats">
+      <div class="slide">
+        <img src="Images/Email Stats-1.png" alt="Photo 1">
+      </div>
+      <div class="slide">
+        <img src="Images/Email Stats-2.png" alt="Photo 2">
+      </div>
+      <div class="slide">
+        <img src="Images/Email Stats-3.png" alt="Photo 3">
+      </div>
+      <div class="slide">
+        <img src="Images/Email Stats-4.png" alt="Photo 4">
+      </div>
     </div>
   </div>
   
   <!-- Grid for pricing tables -->
-  <h2 class="w3-padding-16 w3-text-light-grey" id="Subscription">Subscription Prices</h2>
-  <hr style="width:300px" class="w3-opacity">
-  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-  <stripe-pricing-table pricing-table-id="prctbl_1OzjZALyOx9flSI1DXcnHPBE"
-  publishable-key="pk_live_51OvrCKLyOx9flSI1pbTmgj4tiqjKztVKOVzBrS41xis1EwXrMbQoBN6XptBEtHcSvapjFbF6tc9jVLa6IuZmFeAs00ZrjzTIX0">
-  </stripe-pricing-table>
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="pricing">
+    <h2 class="w3-padding-16 w3-text-light-grey" id="Subscription">Subscription Prices</h2>
+    <hr style="width:300px" class="w3-opacity">
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+    <stripe-pricing-table pricing-table-id="prctbl_1OzjZALyOx9flSI1DXcnHPBE"
+    publishable-key="pk_live_51OvrCKLyOx9flSI1pbTmgj4tiqjKztVKOVzBrS41xis1EwXrMbQoBN6XptBEtHcSvapjFbF6tc9jVLa6IuZmFeAs00ZrjzTIX0">
+    </stripe-pricing-table>
+  </div>
   <!-- End Grid/Pricing tables -->
  
     <!-- Testimonials -->
@@ -138,7 +140,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   
 
   <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <div class="w3-padding-0 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">Contact Us</h2>
     <hr style="width:200px" class="w3-opacity">
 
