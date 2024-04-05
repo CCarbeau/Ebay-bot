@@ -4,11 +4,13 @@
 <title>Kryptos</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="Images/logoIcon.png" type="image/x-icon">
+<link rel="shortcut icon" href="Images/logoIcon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-<link rel="stylesheet" href="app.css?version=4">
+<link rel="stylesheet" href="app.css">
 <script src="app.js"></script>
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
@@ -80,37 +82,27 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </header>
 
   <!-- Casual Level Email -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">The Casual Subscription Email</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <img src="Images/demoEmail.png" alt="boy" class="w3-image" width="992" height="1108">
-    <p> Once you join, you will be sent an email every 2 hours that resembles the one shown above. Each auction target 
-      is an item ending within the next 2 hours that we determined as underpriced. The list of targets is sorted from most 
-      to least discounted. The link column on the far right sends you directly to the eBay auction page. See the target cards
-      page to see what cards we track.  
+  <div class="w3-content w3-justify w3-text-grey w3-padding-0" id="about">
+    <h2 class="w3-text-light-grey">Buy Now & Best Offer Targets</h2>
+    <hr style="width:470px" class="w3-opacity">
+    <p class="w3-text-light-grey"> The Rookie and Hall of Fame plan include Best Offer and Buy Now targets. The email will look like the 
+      photos below, but with many more targets. The email contains cards listed with the buy now or best offer format
+      on eBay that our algorithm determines as underpriced. 
     </p>
-
-    <p>
-      NOTE: you should not buy every identified target. Some cards are mislabeled and 
-      give the card improper features. For example, some cards will say they are a Bowman 1st Auto but will be in-person signed cards.
-      We try to eliminate these mislabeled targets as much as possible, but sometimes they are labelled exactly as the targeted 
-      card would be so they slip through our filters.
-    </p>
+    <br>
+    <img src="Images/bestOfferEmail.png" alt="boy" class="w3-image" width="100%">
+    <img src="Images/buyNowEmail.png" alt="boy" class="w3-image" width=100%>
 
     <!-- Pro Level Email -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">The Pro Subscription Email</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <img src="Images/bestOfferEmail.png" alt="boy" class="w3-image" width="992" height="1108">
-    <img src="Images/buyNowEmail.png" alt="boy" class="w3-image" width="992" height="1108">
-    <p> The Pro Level Email has the same frequency, tracked cards, and auction targets as the Casual Level Email 
-      but also includes Best Offer and Buy Now Targets. These are items that we think are listed at the same or lower 
-      prices than their market value. The Best Offer targets will allow you to get a great deal by offering lower prices
-      than the already low buy now price. The Buy Now targets are items that are listed for significantly less than the 
-      next highest buy now item for that card. THERE ARE NO DUPLICATES BETWEEN THE BEST OFFER AND BUY NOW TABLES. 
-      The images above show what these sections look like. The tables for each will be added to the bottom of the email, 
-      you will not receive multiple emails at one time. 
+    <h2 class="w3-text-light-grey">Auction Targets</h2>
+    <hr style="width:250px" class="w3-opacity">
+    <p class="w3-text-light-grey"> The All-Star and Hall of Fame plan include Auction Targets. The emails you receive will look like the 
+      one below, but with many more targets. The email contains auctions of underpriced cards ending within the next 2 hours. 
+      Auction targets are the best targets as they consistently sell at a 20% or more discount. 
     </p>
+    <br>
+    <img src="Images/auctionTargets.png" alt="boy" class="w3-image" width=100%>
 
 
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
@@ -118,22 +110,26 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <hr style="width:200px" class="w3-opacity">
     <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">2</span><br>
+        <span class="w3-xlarge">2*</span><br>
         Hours between each email
       </div>
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">20</span><br>
-        Auction Targets Per Email
+        <span class="w3-xlarge">2000+</span><br>
+        Auction Targets/Month
       </div>
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">60</span><br>
-        Best Offer + Buy Now Targets Per Email
+        <span class="w3-xlarge">1400+</span><br>
+        Best Offer + Buy Now Targets/Month
       </div>
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">200</span><br>
+        <span class="w3-xlarge">275</span><br>
         Cards Tracked
       </div>
     </div>
+    <p>
+      *NOTE: Emails are sent every 2 hours from 8 am - 12 am EST (inclusive). This is because there are rarely ever
+      auction targets or newly listed buy now/best offer items during off hours. 
+    </p>
     
     <!-- Grid for pricing tables -->
     <h2 class="w3-padding-16 w3-text-light-grey" id="Subscription">Subscription Prices</h2>
@@ -148,7 +144,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 
   <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <div class="w3-padding-0 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">Contact Us</h2>
     <hr style="width:200px" class="w3-opacity">
 
