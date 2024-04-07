@@ -29,6 +29,10 @@ def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
   asEmail = MIMEMultipart("mixed")
   asEmail["From"]=myEmail
   asEmail["Subject"]=subject
+
+  hofEmail = MIMEMultipart("mixed")
+  hofEmail["From"]=myEmail
+  hofEmail["Subject"]=subject
   
   # Create body of the email: 
   
@@ -248,8 +252,18 @@ background-color: rgba(255, 255, 0, 1);
   </html>
   """
 
+  # CREATE OPT - OUT FOOTER: 
+  footer = """\
+<html>
+<body>
+  <a href=https://billing.stripe.com/p/login/6oE02Nfsjdxq4BqbII> Click here to unsubscribe </a>
+</body>
+</html>
+"""
+
   rookieEmail.attach(MIMEText(best_offer_content,"html")) 
   rookieEmail.attach(MIMEText(buy_now_content,"html")) 
+  rookieEmail.attach(MIMEText(footer,"html")) 
 
   context = ssl.create_default_context()
 
@@ -261,6 +275,7 @@ background-color: rgba(255, 255, 0, 1);
   print("Rookie email sent successfully")
 
   asEmail.attach(MIMEText(auction_content,"html")) 
+  asEmail.attach(MIMEText(footer,"html")) 
   
   for address in emailAddresses["AS"]:
       with smtplib.SMTP_SSL("smtp.hostinger.com", 465, context=context) as smtp:
@@ -269,13 +284,15 @@ background-color: rgba(255, 255, 0, 1);
   
   print("All Star email sent successfully")
 
-  asEmail.attach(MIMEText(best_offer_content,"html")) 
-  asEmail.attach(MIMEText(buy_now_content,"html")) 
+  hofEmail.attach(MIMEText(auction_content,"html")) 
+  hofEmail.attach(MIMEText(best_offer_content,"html")) 
+  hofEmail.attach(MIMEText(buy_now_content,"html")) 
+  hofEmail.attach(MIMEText(footer,"html")) 
   
   for address in emailAddresses["HOF"]:
       with smtplib.SMTP_SSL("smtp.hostinger.com", 465, context=context) as smtp:
           smtp.login(myEmail, password)
-          smtp.sendmail(myEmail,address,asEmail.as_string())
+          smtp.sendmail(myEmail,address,hofEmail.as_string())
   
   print("Hall of Fame email sent successfully")
     
