@@ -11,6 +11,16 @@ Notes:
     - Company name: Kryptos 
     - With 9 calls a day (every 2 hours 8 am - 12 am), can have 277 search terms
 
+    - Subscription Tier Breakdown
+        - Rookie Subscription
+            - Best offer and buy now lists only
+        - All Star Subscription
+            - Auction Lists only
+        - Hall of Fame Subscription
+            - Entire email 
+            - Select 3 cards to the tracked list 
+            - 
+
 TODO: 
     - Add bedard and mcdavid cards
     - Add more baseball variations and curry,lebron,luka, big basketball player cards

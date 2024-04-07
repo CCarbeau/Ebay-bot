@@ -15,98 +15,31 @@ import pandas as pd
 # Items is a list of identified targets that we are notifying the userbase about
 def email(emailAddresses,aucTargDf, buyTargDf, offerTargDf):
   
-    myEmail ="christiancarbeau@gmail.com"
-    password = "ezcx vfwc sbae ohpk"
+  myEmail ="noreply@kryptoscards.com"
+  password = "Vineyard1824!"
 
-    time = datetime.now().strftime("%m/%d/%y %H:%M")
-    
-    subject = time + " Targets:"
-    
-    email = MIMEMultipart("mixed")
-    email["From"]=myEmail
-    email["Subject"]=subject
-    
-    # Create body of the email: 
-    
-    # AUCTION TARGETS:
+  time = datetime.now().strftime("%m/%d/%y %H:%M")
+  
+  subject = time + " Targets:"
+  
+  rookieEmail = MIMEMultipart("mixed")
+  rookieEmail["From"]=myEmail
+  rookieEmail["Subject"]=subject
 
-    if(aucTargDf.size != 0):
-      html_content = """\
+  asEmail = MIMEMultipart("mixed")
+  asEmail["From"]=myEmail
+  asEmail["Subject"]=subject
+  
+  # Create body of the email: 
+  
+  # AUCTION TARGETS:
+
+
+  if(aucTargDf.size != 0):
+    auction_content = """\
 <html>
 <head>
 <title>Auction Targets</title>
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-  }
-</style>
-<style>
-  td.discount-cell-green {
-    background-color: rgba(0, 255, 0, 1);
-  }
-  td.discount-cell-light-green {
-    background-color: rgba(0, 255, 0, 0.5);
-  }
-  td.discount-cell-yellow {
-    background-color: rgba(255, 255, 0, 1);
-  }
-</style>
-</head>
-<body>
-<h2>Auction Targets</h2>
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Price</th>
-    <th>Discount</th>
-    <th>Link</th>
-  </tr>
-"""
-      # Add rows dynamically
-      for row,value in aucTargDf.iterrows():
-          item = aucTargDf.loc[row]["Title"]
-          price = "{:0.2f}".format(aucTargDf.loc[row]["Price"])
-          discount = ("{:0.2f}".format(aucTargDf.loc[row]["Discount"]))
-          discount_cell_class = "green"
-          if(float(discount) >= 25):
-              discount_cell_class="discount-cell-green"
-          elif(float(discount) >= 15):
-              discount_cell_class="discount-cell-light-green"
-          else: 
-              discount_cell_class="discount-cell-yellow"
-          try: 
-            link = aucTargDf.loc[row]["Link"]
-          except:
-            link = "None"
-          html_content += f"""
-          <tr>
-            <td>{item}</td>
-            <td>{price}</td>
-            <td class ={discount_cell_class}>{discount}</td>
-            <td><a href="{link}">Link</a></td>
-          </tr>
-          """
-
-      # Close the table and HTML body
-      html_content += """
-        </table>
-      </body>
-      </html>
-      """
-      email.attach(MIMEText(html_content,"html")) 
-            
-    # BEST OFFER TARGETS: 
-    # Create body of the email: 
-    html_content = """\
-<html>
-<head>
-<title>Best Offer Targets</title>
 <style>
 table {
   width: 100%;
@@ -127,6 +60,85 @@ td.discount-cell-light-green {
 }
 td.discount-cell-yellow {
   background-color: rgba(255, 255, 0, 1);
+}
+</style>
+</head>
+<body>
+<h2>Auction Targets</h2>
+<table>
+<tr>
+  <th>Item</th>
+  <th>Price</th>
+  <th>Discount</th>
+  <th>Link</th>
+</tr>
+"""
+    # Add rows dynamically
+    for row,value in aucTargDf.iterrows():
+        item = aucTargDf.loc[row]["Title"]
+        price = "{:0.2f}".format(aucTargDf.loc[row]["Price"])
+        discount = ("{:0.2f}".format(aucTargDf.loc[row]["Discount"]))
+        discount_cell_class = "green"
+        if(float(discount) >= 25):
+            discount_cell_class="discount-cell-green"
+        elif(float(discount) >= 15):
+            discount_cell_class="discount-cell-light-green"
+        else: 
+            discount_cell_class="discount-cell-yellow"
+        try: 
+          link = aucTargDf.loc[row]["Link"]
+        except:
+          link = "None"
+        auction_content += f"""
+        <tr>
+          <td>{item}</td>
+          <td>{price}</td>
+          <td class ={discount_cell_class}>{discount}</td>
+          <td><a href="{link}">Link</a></td>
+        </tr>
+        """
+
+    # Close the table and HTML body
+    auction_content += """
+      </table>
+    </body>
+    </html>
+    """
+  else:
+    auction_content = """\
+<html>
+<body>
+  <h2>No Auction Targets</h2>
+</body>
+</html>
+"""
+          
+  # BEST OFFER TARGETS: 
+  # Create body of the email: 
+  best_offer_content = """\
+<html>
+<head>
+<title>Best Offer Targets</title>
+<style>
+table {
+width: 100%;
+border-collapse: collapse;
+}
+th, td {
+border: 1px solid black;
+padding: 8px;
+text-align: left;
+}
+</style>
+<style>
+td.discount-cell-green {
+background-color: rgba(0, 255, 0, 1);
+}
+td.discount-cell-light-green {
+background-color: rgba(0, 255, 0, 0.5);
+}
+td.discount-cell-yellow {
+background-color: rgba(255, 255, 0, 1);
 }
 </style>
 </head>
@@ -134,67 +146,66 @@ td.discount-cell-yellow {
 <h2>Best Offer Targets</h2>
 <table>
 <tr>
-  <th>Item</th>
-  <th>Price</th>
-  <th>Discount</th>
-  <th>Link</th>
+<th>Item</th>
+<th>Price</th>
+<th>Discount</th>
+<th>Link</th>
 </tr>
 """
-    # Add rows dynamically
-    for row, value in offerTargDf.iterrows():
-        item = offerTargDf.loc[row]["Title"]
-        price = "{:0.2f}".format(offerTargDf.loc[row]["Price"])
-        discount = ("%.2f" % round(offerTargDf.loc[row]["Discount"], 2))
-        discount_cell_class = "green"
-        if(float(discount) >= 25):
-            discount_cell_class="discount-cell-green"
-        elif(float(discount) >= 15):
-            discount_cell_class="discount-cell-light-green"
-        else: 
-            discount_cell_class="discount-cell-yellow"
-        link = offerTargDf.loc[row]["Link"]
-        html_content += f"""
-        <tr>
-          <td>{item}</td>
-          <td>{price}</td>
-          <td class ={discount_cell_class}>{discount}</td>
-          <td><a href="{link}">Link</a></td>
-        </tr>
-        """
-    # Close the table and HTML body
-    html_content += """
-      </table>
-    </body>
-    </html>
-    """
-    email.attach(MIMEText(html_content,"html")) 
+  # Add rows dynamically
+  for row, value in offerTargDf.iterrows():
+      item = offerTargDf.loc[row]["Title"]
+      price = "{:0.2f}".format(offerTargDf.loc[row]["Price"])
+      discount = ("%.2f" % round(offerTargDf.loc[row]["Discount"], 2))
+      discount_cell_class = "green"
+      if(float(discount) >= 25):
+          discount_cell_class="discount-cell-green"
+      elif(float(discount) >= 15):
+          discount_cell_class="discount-cell-light-green"
+      else: 
+          discount_cell_class="discount-cell-yellow"
+      link = offerTargDf.loc[row]["Link"]
+      best_offer_content += f"""
+      <tr>
+        <td>{item}</td>
+        <td>{price}</td>
+        <td class ={discount_cell_class}>{discount}</td>
+        <td><a href="{link}">Link</a></td>
+      </tr>
+      """
+  # Close the table and HTML body
+  best_offer_content += """
+    </table>
+  </body>
+  </html>
+  """
 
-    # BUY NOW TARGETS: 
-    # Create body of the email: 
-    html_content = """\
+  # BUY NOW TARGETS: 
+  # Create body of the email: 
+  buy_now_content = """\
 <html>
 <head>
 <title>Buy Now Targets</title>
 <style>
 table {
-  width: 100%;
-  border-collapse: collapse;
+width: 100%;
+border-collapse: collapse;
 }
 th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
+border: 1px solid black;
+padding: 8px;
+text-align: left;
 }
 </style>
 <style>
 td.discount-cell-green {
-  background-color: rgba(0, 255, 0, 1);
+background-color: rgba(0, 255, 0, 1);
 }
 td.discount-cell-light-green {
-  background-color: rgba(0, 255, 0, 0.5);
+background-color: rgba(0, 255, 0, 0.5);
 }
 td.discount-cell-yellow {
-  background-color: rgba(255, 255, 0, 1);
+background-color: rgba(255, 255, 0, 1);
 }
 </style>
 </head>
@@ -202,50 +213,71 @@ td.discount-cell-yellow {
 <h2>Buy Now Targets</h2>
 <table>
 <tr>
-  <th>Item</th>
-  <th>Price</th>
-  <th>Discount</th>
-  <th>Link</th>
+<th>Item</th>
+<th>Price</th>
+<th>Discount</th>
+<th>Link</th>
 </tr>
 """
-    # Add rows dynamically
-    for row, value in buyTargDf.iterrows():
-        item = buyTargDf.loc[row]["Title"]
-        price = "{:0.2f}".format(buyTargDf.loc[row]["Price"])
-        discount = ("%.2f" % round(buyTargDf.loc[row]["Discount"], 2))
-        discount_cell_class = "green"
-        if(float(discount) >= 25):
-            discount_cell_class="discount-cell-green"
-        elif(float(discount) >= 15):
-            discount_cell_class="discount-cell-light-green"
-        else: 
-            discount_cell_class="discount-cell-yellow"
-        link = buyTargDf.loc[row]["Link"]
-        html_content += f"""
-        <tr>
-          <td>{item}</td>
-          <td>{price}</td>
-          <td class ={discount_cell_class}>{discount}</td>
-          <td><a href="{link}">Link</a></td>
-        </tr>
-        """
+  # Add rows dynamically
+  for row, value in buyTargDf.iterrows():
+      item = buyTargDf.loc[row]["Title"]
+      price = "{:0.2f}".format(buyTargDf.loc[row]["Price"])
+      discount = ("%.2f" % round(buyTargDf.loc[row]["Discount"], 2))
+      discount_cell_class = "green"
+      if(float(discount) >= 25):
+          discount_cell_class="discount-cell-green"
+      elif(float(discount) >= 15):
+          discount_cell_class="discount-cell-light-green"
+      else: 
+          discount_cell_class="discount-cell-yellow"
+      link = buyTargDf.loc[row]["Link"]
+      buy_now_content += f"""
+      <tr>
+        <td>{item}</td>
+        <td>{price}</td>
+        <td class ={discount_cell_class}>{discount}</td>
+        <td><a href="{link}">Link</a></td>
+      </tr>
+      """
 
-    # Close the table and HTML body
-    html_content += """
-      </table>
-    </body>
-    </html>
-    """
-    email.attach(MIMEText(html_content,"html")) 
+  # Close the table and HTML body
+  buy_now_content += """
+    </table>
+  </body>
+  </html>
+  """
 
-    context = ssl.create_default_context()
+  rookieEmail.attach(MIMEText(best_offer_content,"html")) 
+  rookieEmail.attach(MIMEText(buy_now_content,"html")) 
 
-    for address in emailAddresses:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
-            smtp.login(myEmail, password)
-            smtp.sendmail(myEmail,address,email.as_string())
-    print("Email sent successfully")
-    
+  context = ssl.create_default_context()
+
+  for address in emailAddresses["Rookie"]:
+      with smtplib.SMTP_SSL("smtp.hostinger.com", 465, context=context) as smtp:
+          smtp.login(myEmail, password)
+          smtp.sendmail(myEmail,address,rookieEmail.as_string())
+
+  print("Rookie email sent successfully")
+
+  asEmail.attach(MIMEText(auction_content,"html")) 
+  
+  for address in emailAddresses["AS"]:
+      with smtplib.SMTP_SSL("smtp.hostinger.com", 465, context=context) as smtp:
+          smtp.login(myEmail, password)
+          smtp.sendmail(myEmail,address,asEmail.as_string())
+  
+  print("All Star email sent successfully")
+
+  asEmail.attach(MIMEText(best_offer_content,"html")) 
+  asEmail.attach(MIMEText(buy_now_content,"html")) 
+  
+  for address in emailAddresses["HOF"]:
+      with smtplib.SMTP_SSL("smtp.hostinger.com", 465, context=context) as smtp:
+          smtp.login(myEmail, password)
+          smtp.sendmail(myEmail,address,asEmail.as_string())
+  
+  print("Hall of Fame email sent successfully")
     
 
 # if __name__ == "__main__":

@@ -32,6 +32,7 @@ def currPrice(token, item, condition, auto):
         parseddoc["itemSummaries"]
     except:
         print("No comps found for: "+item)
+        return [[],[],[]]
     else: 
         # Traverse the JSON document and extract desired data
 
@@ -64,7 +65,7 @@ def currPrice(token, item, condition, auto):
                             pricesIDs.append(title)
                 
                             try:
-                                link = item["itemWebUrl"]
+                                link = item["itemAffiliateWebUrl"]
                             except:
                                 link = "None"
 
@@ -109,7 +110,7 @@ def currPrice(token, item, condition, auto):
                             pricesIDs.append(title)
                 
                             try:
-                                link = item["itemWebUrl"]
+                                link = item["itemAffiliateWebUrl"]
                             except:
                                 link = "None"
 
@@ -144,7 +145,7 @@ def currPrice(token, item, condition, auto):
 
         buyNow = pd.DataFrame(columns = ["Title", "Price", "Link"])
        
-        if(len(pricesIDs)!=0):       
+        if(len(pricesIDs)):       
             prices["Title"]=pricesIDs
             prices["Price"]=pricesPrices
             prices["Link"]=pricesLinks
