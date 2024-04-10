@@ -6,7 +6,7 @@ def getEmailAddresses():
     stripe.api_key = "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"
     # stripe.api_key = "sk_test_51OvrCKLyOx9flSI1e6P9SaoZMQvHzwwIH90pIET6dB5cmaDoPWVeLULlAcCewOboFyCoQcTpAlRviv2lFxiYSBCh00w6pMZW6x"
     
-    ret = {"Rookie":["christiancarbeau@gmail.com"],"AS":["christiancarbeau@gmail.com"], "HOF":["christiancarbeau@gmail.com","dominicpiz2@gmail.com"]}
+    ret = {"Rookie":["christiancarbeau@gmail.com"],"AS":["christiancarbeau@gmail.com"], "HOF":["christiancarbeau@gmail.com","dominicpiz2@gmail.com","kennypizzo3@gmail.com","jkjefferies@gmail.com"]}
     
     subscriptions = stripe.Subscription.list()
 

@@ -97,8 +97,8 @@ td.discount-cell-yellow {
         <tr>
           <td>{item}</td>
           <td>{price}</td>
-          <td class ={discount_cell_class}>{discount}</td>
-          <td><a href="{link}">Link</a></td>
+          <td class ={discount_cell_class}>{discount}%</td>
+          <td><a href="{link}">eBay Link</a></td>
         </tr>
         """
 
@@ -173,8 +173,8 @@ background-color: rgba(255, 255, 0, 1);
       <tr>
         <td>{item}</td>
         <td>{price}</td>
-        <td class ={discount_cell_class}>{discount}</td>
-        <td><a href="{link}">Link</a></td>
+        <td class ={discount_cell_class}>{discount}%</td>
+        <td><a href="{link}">eBay Link</a></td>
       </tr>
       """
   # Close the table and HTML body
@@ -240,8 +240,8 @@ background-color: rgba(255, 255, 0, 1);
       <tr>
         <td>{item}</td>
         <td>{price}</td>
-        <td class ={discount_cell_class}>{discount}</td>
-        <td><a href="{link}">Link</a></td>
+        <td class ={discount_cell_class}>{discount}%</td>
+        <td><a href="{link}">eBay Link</a></td>
       </tr>
       """
 
@@ -257,6 +257,11 @@ background-color: rgba(255, 255, 0, 1);
 <html>
 <body>
   <a href=https://billing.stripe.com/p/login/6oE02Nfsjdxq4BqbII> Click here to unsubscribe </a>
+  <br>
+  <br>
+  <p style="font-size: 8px;">
+    Kryptos is located at 39 Spring Brook Road, Morristown, NJ 07960
+  </p>
 </body>
 </html>
 """
